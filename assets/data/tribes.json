@@ -1,0 +1,44 @@
+[
+  {
+    "id": "A",
+    "name": "Damn Liar",
+    "color": "#ffca28",
+    "wins": 1,
+    "losses": 1
+  },
+  {
+    "id": "B",
+    "name": "Team B",
+    "color": "#33691e",
+    "wins": 1,
+    "losses": 1
+  },
+  {
+    "id": "C",
+    "name": "The Fermentalists",
+    "color": "#01579b",
+    "wins": 2,
+    "losses": 0
+  },
+  {
+    "id": "D",
+    "name": "Hermits & Harlots",
+    "color": "#4a148c",
+    "wins": 0,
+    "losses": 2
+  },
+  {
+    "id": "E",
+    "name": "Push Up Contest",
+    "color": "#b71c1c",
+    "wins": 2,
+    "losses": 0
+  },
+  {
+    "id": "F",
+    "name": "Teem Feet",
+    "color": "#ff6f00",
+    "wins": 0,
+    "losses": 2
+  }
+]
