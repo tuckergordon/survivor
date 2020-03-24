@@ -10,8 +10,8 @@
         </mat-card-header>
       </td>
       <td class="scores">
-        <div class="score" [class.score--winner]="totals[0].total > totals[1].total" [style.background-color]="totals[0].total > totals[1].total ? totals[0].color : null">{{totals[0].total | minuteSeconds}}</div> - 
-        <div class="score" [class.score--winner]="totals[0].total < totals[1].total" [style.background-color]="totals[0].total < totals[1].total ? totals[1].color : null">{{totals[1].total | minuteSeconds}}</div>
+        <div class="score" [class.score--winner]="winnerIndex === 0" [style.background-color]="winnerIndex === 0 ? totals[0].color : null">{{ getResult(totals[0].total) }}</div> - 
+        <div class="score" [class.score--winner]="winnerIndex === 1" [style.background-color]="winnerIndex === 1 ? totals[1].color : null">{{ getResult(totals[1].total) }}</div>
       </td>
       <td>
         <mat-card-header style="flex-flow: row-reverse;">
@@ -27,12 +27,12 @@
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <td mat-cell *matCellDef="let element" [style.text-decoration]="element.eliminated ? 'line-through' : null"> {{element.name}} </td>
           </ng-container>
           <!-- Result Column -->
           <ng-container matColumnDef="result">
             <th mat-header-cell *matHeaderCellDef style="text-align: right;"> {{ resultUnit }} </th>
-            <td mat-cell *matCellDef="let element" style="text-align: right;"> {{element['round' + round] | minuteSeconds}} </td>
+            <td mat-cell *matCellDef="let element" style="text-align: right;"> {{ getResult(element['round' + round]) }} </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -47,12 +47,12 @@
           <!-- Result Column -->
           <ng-container matColumnDef="result">
             <th mat-header-cell *matHeaderCellDef> {{ resultUnit }} </th>
-            <td mat-cell *matCellDef="let element"> {{element['round' + round] | minuteSeconds}} </td>
+            <td mat-cell *matCellDef="let element"> {{ getResult(element['round' + round]) }} </td>
           </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <td mat-cell *matCellDef="let element" [style.text-decoration]="element.eliminated ? 'line-through' : null"> {{ element.name }} </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="['result', 'name']"></tr>
           <tr mat-row *matRowDef="let row; columns: ['result', 'name']"></tr>

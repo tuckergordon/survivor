@@ -1,0 +1,18 @@
+<mat-card class="round-header-card">
+  <mat-card-header>
+    <mat-card-title>Round 2: 32oz Water Chug</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="round-description">In Cyberspace, it's easy to lose control. Forget about your real world surroundings.
+      Many Internet residents have to unplug at certain times to ensure they're taking care of their human bodies. This
+      next challenge will be a practice in the salvation of the corporeal body. How fast can you drink 32 ounces of
+      water? Again, the TEAM that gets the LOWEST COMBINED score wins this challenge. Please send a video of this. We'll
+      have the same pairings as last challenge.</p>
+
+    <p class="round-description">I'd suggest a Nalgene, but if you don't have one, or another vessel that is 32
+    ounces, just be careful in ensuring that you're drinking the correct amount. I wouldn't want you going high or low.
+    </p>
+  </mat-card-content>
+</mat-card>
+<app-result-row *ngFor="let row of (resultRows$ | async)" [totals]="row" [round]="2" [max]="max$ | async"
+  resultUnit="Time" sortDirection="asc"></app-result-row>

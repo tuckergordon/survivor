@@ -15,7 +15,7 @@ export class WinLossChartComponent implements OnInit, AfterViewInit {
 
   @Input() totals: [TribeTotal, TribeTotal];
   @Input() round: number;
-  @Input() resultUnit = 'Count';
+  @Input() resultUnit = 'Time';
   @Input() sortDirection: 'asc' | 'desc' = 'asc';
   @Input() max?: number;
 

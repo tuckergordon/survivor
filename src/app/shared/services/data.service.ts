@@ -77,7 +77,7 @@ export class DataService {
           let total = 0;
           const players = [];
           tribe.players.forEach(player => {
-            const score = player['round' + round]
+            const score = +player['round' + round];
             total += score;
             players.push({
               ...player,

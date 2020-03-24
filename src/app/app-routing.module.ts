@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RosterComponent } from './roster/roster.component';
 import { RoundOneComponent } from './results/round-one/round-one.component';
+import { RoundTwoComponent } from './results/round-two/round-two.component';
+import { RoundThreeComponent } from './results/round-three/round-three.component';
 
 const routes: Routes = [
   {
@@ -10,12 +12,19 @@ const routes: Routes = [
   },
   {
     path: 'results',
-    component: RoundOneComponent,
     children: [
       {
         path: '1',
         component: RoundOneComponent,
-      }
+      },
+      {
+        path: '2',
+        component: RoundTwoComponent,
+      },
+      {
+        path: '3',
+        component: RoundThreeComponent,
+      },
     ]
   },
   { path: '',

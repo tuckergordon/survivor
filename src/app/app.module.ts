@@ -19,6 +19,8 @@ import { TotalCardComponent } from './total-card/total-card.component';
 import { MinuteSecondsPipe } from './shared/pipes/minute-seconds.pipe';
 import { ResultRowComponent } from './results/result-row/result-row.component';
 import { WinLossChartComponent } from './win-loss-chart/win-loss-chart.component';
+import { RoundTwoComponent } from './results/round-two/round-two.component';
+import { RoundThreeComponent } from './results/round-three/round-three.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { WinLossChartComponent } from './win-loss-chart/win-loss-chart.component
     TotalCardComponent,
     MinuteSecondsPipe,
     ResultRowComponent,
-    WinLossChartComponent
+    WinLossChartComponent,
+    RoundTwoComponent,
+    RoundThreeComponent
   ],
   imports: [
     BrowserModule,
