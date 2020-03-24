@@ -17,7 +17,12 @@ export class RoundTwoComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(2);
+    this.totals$ = this.dataService.getRoundTotals(2).pipe(map(totals => {
+      totals.forEach(total => {
+        total.total /= total.players.length;  // take the mean
+      });
+      return totals;
+    }));
     this.max$ = this.totals$.pipe(
       map(totals => {
         let max = 0;
