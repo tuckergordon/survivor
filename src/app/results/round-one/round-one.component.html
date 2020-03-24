@@ -1,1 +1,19 @@
-<p>round-one works!</p>
+<mat-card class="round-header-card">
+  <mat-card-header>
+    <mat-card-title>Round 1: Hold Your Breath</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="round-description">The challenge is holding your breath for as long as you can. Here's the kicker, once
+      everyone sends A VIDEO of you holding your breath for as long as possible, Andrew will add up the times for
+      everyone
+      and your team score will be the sum of all of the times of your teammates and yourself added together. Make sure
+      you do this safely, and also plug your nose so that Andrew can tell that you're not breathing in a sneaky,
+      imperceptible way.</p>
+  </mat-card-content>
+</mat-card>
+<app-result-row *ngFor="let row of (resultRows$ | async)" 
+  [totals]="row" 
+  [round]="1" 
+  [max]="max$ | async"
+  resultUnit="Time"
+  sortDirection="desc"></app-result-row>

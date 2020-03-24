@@ -1,0 +1,16 @@
+<mat-card class="total-card tribe-card">
+  <mat-card-header>
+    <img class="tribe-icon" mat-card-avatar 
+      [src]="'assets/images/tribe-icons/' + tribeTotal.id + '.png'"
+      [style.border-color]="tribeTotal.color">
+    <mat-card-title>{{tribeTotal.name}}</mat-card-title>
+    <mat-card-subtitle>({{tribeTotal.total | minuteSeconds}})</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li *ngFor="let player of tribeTotal.players">
+        <span class="player-name" [class.player-name--eliminated]="player.eliminated === round">{{player.name}}</span>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

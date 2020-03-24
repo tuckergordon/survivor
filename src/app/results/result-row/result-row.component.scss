@@ -1,0 +1,40 @@
+.result-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-layout-table {
+  flex-grow: 1;
+}
+
+.result-table {
+  width: 100%;
+}
+
+.chart {
+  display: block;
+}
+
+.scores {
+  text-align: center;
+  font-size: 30px;
+}
+
+.score {
+  border-radius: 4px;
+  padding: 4px;
+  display: inline;
+
+  &--winner {
+    font-weight: bold;
+  }
+}
+
+app-win-loss-chart {
+  height: calc(100% - 54px);
+  margin-top: 54px;  // TODO: this is hacky
+}
+
+td {
+  width: calc(100% / 3);
+}

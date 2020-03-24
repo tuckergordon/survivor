@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,10 @@ import { AppComponent } from './app.component';
 import { RosterComponent } from './roster/roster.component';
 import { RosterCardComponent } from './roster/roster-card/roster-card.component';
 import { RoundOneComponent } from './results/round-one/round-one.component';
+import { TotalCardComponent } from './total-card/total-card.component';
+import { MinuteSecondsPipe } from './shared/pipes/minute-seconds.pipe';
+import { ResultRowComponent } from './results/result-row/result-row.component';
+import { WinLossChartComponent } from './win-loss-chart/win-loss-chart.component';
 
 
 @NgModule({
@@ -22,7 +27,11 @@ import { RoundOneComponent } from './results/round-one/round-one.component';
     NavbarComponent,
     RosterComponent,
     RosterCardComponent,
-    RoundOneComponent
+    RoundOneComponent,
+    TotalCardComponent,
+    MinuteSecondsPipe,
+    ResultRowComponent,
+    WinLossChartComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +42,7 @@ import { RoundOneComponent } from './results/round-one/round-one.component';
     MatIconModule,
     MatListModule,
     MatSidenavModule,
+    MatTableModule,
     MatToolbarModule
   ],
   providers: [],

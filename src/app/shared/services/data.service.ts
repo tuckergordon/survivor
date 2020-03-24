@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, combineLatest } from 'rxjs';
+import { Observable, combineLatest, of } from 'rxjs';
 import { shareReplay, map } from 'rxjs/operators';
-import { Player, Tribe } from '../models/survivor.model';
+import { Player, TribeDataModel, Tribe, TribeTotal } from '../models/survivor.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,8 @@ import { Player, Tribe } from '../models/survivor.model';
 export class DataService {
 
   players$: Observable<Player[]>;
-  tribes$: Observable<Tribe[]>;
-  tribeMap$: Observable<{ [key: string]: Tribe }>;
+  tribes$: Observable<TribeDataModel[]>;
+  tribeMap$: Observable<{ [key: string]: TribeDataModel }>;
 
   constructor(private http: HttpClient) { }
 
@@ -49,7 +49,7 @@ export class DataService {
   //   return rawData$;
   // }
 
-  getPlayersByTribe() {
+  getPlayersByTribe(): Observable<Tribe[]> {
     return this.getPlayers().pipe(
       map(players => {
         const tribes = {};
@@ -68,6 +68,34 @@ export class DataService {
     );
   }
 
+  // round 1 = 1
+  getRoundTotals(round: number): Observable<TribeTotal[]> {
+    if (!round) return null;
+    return this.getPlayersByTribe().pipe(
+      map(tribes => {
+        const totals = tribes.map(tribe => {
+          let total = 0;
+          const players = [];
+          tribe.players.forEach(player => {
+            const score = player['round' + round]
+            total += score;
+            players.push({
+              ...player,
+              score
+            });
+            // total += player.scores[round - 1];  // 1 indexing TODO: scores array
+          });
+          return {
+            ...tribe,
+            players,
+            total
+          } as TribeTotal;
+        });
+        return totals;
+      })
+    );
+  }
+
   getPlayers(): Observable<Player[]> {
     if (!this.players$) {
       const rawData$ = this.http.get<Player[]>('assets/data/data.json');
@@ -77,7 +105,6 @@ export class DataService {
           return results[0].map(player => {
             return {
               ...player,
-              eliminated: !!player.eliminated,
               tribe: results[1]['' + player.tribe]
             };
           }).sort((a, b) => {
@@ -93,19 +120,19 @@ export class DataService {
     return this.players$;
   }
 
-  getTribes(): Observable<Tribe[]> {
+  getTribes(): Observable<TribeDataModel[]> {
     this._populateTribes();
     return this.tribes$;
   }
 
-  getTribesMap(): Observable<{ [key: string]: Tribe; }> {
+  getTribesMap(): Observable<{ [key: string]: TribeDataModel; }> {
     this._populateTribes();
     return this.tribeMap$;
   }
 
   private _populateTribes() {
     if (!this.tribes$) {
-      this.tribes$ = this.http.get<Tribe[]>('assets/data/tribes.json').pipe(shareReplay(1));
+      this.tribes$ = this.http.get<TribeDataModel[]>('assets/data/tribes.json').pipe(shareReplay(1));
       this.tribeMap$ = this.tribes$.pipe(
         map(tribes => {
           const tribesMap = {};

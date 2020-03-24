@@ -1,11 +1,6 @@
-<!-- <div class="tribe-group" *ngFor="let tribe of (tribes$ | async)">
-  <h3 class="tribe-group-title"></h3>
-  <app-roster-card *ngFor="let player of tribe.players" [player]="player"></app-roster-card>
-</div> -->
 <mat-card class="tribe-card" *ngFor="let tribe of (tribes$ | async)">
   <mat-card-header>
-    <img class="tribe-icon" mat-card-avatar 
-      [src]="'assets/images/tribe-icons/' + tribe.id + '.png'"
+    <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + tribe.id + '.png'"
       [style.border-color]="tribe.color">
     <mat-card-title>{{tribe.name}}</mat-card-title>
     <mat-card-subtitle>({{tribe.wins}}, {{tribe.losses}})</mat-card-subtitle>
@@ -13,7 +8,11 @@
   <mat-card-content>
     <ul>
       <li *ngFor="let player of tribe.players">
-        <span class="player-name" [class.player-name--eliminated]="player.eliminated">{{player.name}}</span>
+        <span *ngIf="!player.eliminated; else eliminated">{{player.name}}</span>
+        <ng-template #eliminated>
+          <span class="player-name player-name--eliminated">{{player.name}}</span>
+          <span class="eliminated-message">&nbsp;(round {{player.eliminated}})</span>
+        </ng-template>
         <a [href]="'mailto:' + player.email">
           <mat-icon class="player-email">email</mat-icon>
         </a>

@@ -1,0 +1,16 @@
+app-result-row {
+  margin: 15px;
+}
+
+:host ::ng-deep {
+
+  .round-header-card {
+    display: inline-block;
+    max-width: 780px;
+    margin-bottom: 15px;
+
+    .mat-card-header-text {
+      margin: 0;
+    }
+  }
+}

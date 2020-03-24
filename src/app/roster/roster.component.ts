@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Player, Tribe } from '../shared/models/survivor.model';
+import { Player, TribeDataModel } from '../shared/models/survivor.model';
 import { DataService } from '../shared/services/data.service';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class RosterComponent implements OnInit {
 
-  tribes$: Observable<Tribe[]>;
+  tribes$: Observable<TribeDataModel[]>;
 
   constructor(private dataService: DataService) { }
 
