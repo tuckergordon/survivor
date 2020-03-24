@@ -16,9 +16,6 @@ export class RosterComponent implements OnInit {
 
   ngOnInit(): void {
     this.tribes$ = this.dataService.getPlayersByTribe();
-    this.tribes$.subscribe(tribes => {
-      console.log(tribes);
-    })
   }
 
 }
