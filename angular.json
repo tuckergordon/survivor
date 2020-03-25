@@ -41,7 +41,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "baseHref": "./survivor/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
