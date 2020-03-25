@@ -3,7 +3,7 @@ export interface Player {
   email: string;
   tribe: TribeDataModel;
   scores: number[];
-  eliminated: boolean;
+  eliminated: number;
 }
 
 export interface TribeDataModel {

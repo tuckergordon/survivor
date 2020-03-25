@@ -39,7 +39,7 @@
     "name": "Kalil Simms",
     "email": "kaliltsims@gmail.com",
     "tribe": "A",
-    "eliminated": "",
+    "eliminated": 3,
     "round1": 62,
     "round2": 30,
     "round3": 56
@@ -246,7 +246,7 @@
     "name": "Julian Andrews",
     "email": "julian.w.andrews@gmail.com",
     "tribe": "D",
-    "eliminated": "",
+    "eliminated": 3,
     "round1": 134,
     "round2": 14,
     "round3": 100
@@ -363,7 +363,7 @@
     "name": "Elyse Lindahl",
     "email": "elyse.lindahl@gmail.com",
     "tribe": "F",
-    "eliminated": "",
+    "eliminated": 3,
     "round1": 75,
     "round2": 45,
     "round3": 60

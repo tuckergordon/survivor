@@ -1,24 +1,45 @@
-<mat-card class="round-header-card">
-  <mat-card-header>
-    <mat-card-title>Round 3: Sporcle States</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p class="round-description">This next challenge is a little throwback. Y'all remember Sporcle? I'm linking you to a
-      Sporcle quiz that requires you to find all the US states on a map without borders. You are welcome to skip a state
-      by clicking one of the arrows, but if you mark one wrong, the quiz will end.</p>
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round 3: Sporcle States</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">This next challenge is a little throwback. Y'all remember Sporcle? I'm linking you to
+        a
+        Sporcle quiz that requires you to find all the US states on a map without borders. You are welcome to skip a
+        state
+        by clicking one of the arrows, but if you mark one wrong, the quiz will end.</p>
 
-    <a href="https://www.sporcle.com/games/mhershfield/us-states-no-outlines-minefield">
-      https://www.sporcle.com/games/mhershfield/us-states-no-outlines-minefield
-    </a>
+      <a href="https://www.sporcle.com/games/mhershfield/us-states-no-outlines-minefield">
+        https://www.sporcle.com/games/mhershfield/us-states-no-outlines-minefield
+      </a>
 
-    <p class="round-description">This game requires a little honor: I'm requesting that you play no more than three
-      times. I know there's not
-      really a way for me to check this, so just don't be an asshole and please play fair.</p>
+      <p class="round-description">This game requires a little honor: I'm requesting that you play no more than three
+        times. I know there's not
+        really a way for me to check this, so just don't be an asshole and please play fair.</p>
 
-    <p class="round-description">The scoring will once again be an average of the results for each team. If three people
-      get 20%, two get 50%, and
-      one gets 25%, the team score would be 31% (rounded up). No one is required to sit out.</p>
-  </mat-card-content>
-</mat-card>
+      <p class="round-description">The scoring will once again be an average of the results for each team. If three
+        people
+        get 20%, two get 50%, and
+        one gets 25%, the team score would be 31% (rounded up). No one is required to sit out.</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
+            [style.color]="player.tribe.color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
 <app-result-row *ngFor="let row of (resultRows$ | async)" [totals]="row" [round]="3" [max]="max$ | async"
   resultUnit="Pct" sortDirection="desc"></app-result-row>

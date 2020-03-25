@@ -31,6 +31,43 @@ mat-card.tribe-card,
 }
 
 .tribe-icon {
-  border-width: 4px;
-  border-style: solid;
+  border: 4px solid currentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.round-header-cards {
+  display: flex;
+}
+
+.eliminated-players {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.eliminated-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  text-align: center;
+
+  .tribe-icon:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\00D7";
+    font-size: 64px;
+    color: currentColor;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  &__name {
+    margin-top: 10px;
+  }
 }

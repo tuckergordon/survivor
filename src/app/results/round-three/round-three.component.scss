@@ -6,11 +6,15 @@ app-result-row {
 
   .round-header-card {
     display: inline-block;
-    max-width: 780px;
     margin-bottom: 15px;
 
     .mat-card-header-text {
       margin: 0;
     }
+  }
+
+  .eliminated-card {
+    flex: 0 1 30%; 
+    margin-left: 20px;
   }
 }

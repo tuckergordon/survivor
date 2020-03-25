@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
 import { map } from 'rxjs/operators';
-import { TribeTotal } from 'src/app/shared/models/survivor.model';
+import { TribeTotal, Player } from 'src/app/shared/models/survivor.model';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -13,11 +13,13 @@ export class RoundOneComponent implements OnInit {
   totals$: Observable<TribeTotal[]>;
   resultRows$: Observable<Array<[TribeTotal, TribeTotal]>>;
   max$: Observable<number>;
+  eliminated$: Observable<Player[]>;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     this.totals$ = this.dataService.getRoundTotals(1);
+    this.eliminated$ = this.dataService.getRoundEliminated(1);
     this.max$ = this.totals$.pipe(
       map(totals => {
         let max = 0;

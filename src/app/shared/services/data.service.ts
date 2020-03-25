@@ -96,6 +96,20 @@ export class DataService {
     );
   }
 
+  getRoundEliminated(round: number): Observable<Player[]> {
+    return this.getPlayers().pipe(
+      map(players => {
+        const eliminated = [];
+        players.forEach(player => {
+          if (player.eliminated === round) {
+            eliminated.push(player);
+          }
+        });
+        return eliminated;
+      })
+    );
+  }
+
   getPlayers(): Observable<Player[]> {
     if (!this.players$) {
       const rawData$ = this.http.get<Player[]>('assets/data/data.json');
