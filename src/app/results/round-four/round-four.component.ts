@@ -20,7 +20,7 @@ export class RoundFourComponent implements OnInit {
   ngOnInit(): void {
     this.totals$ = this.dataService.getRoundTotals(4).pipe(map(totals => {
       totals.forEach(total => {
-        total.total /= total.players.filter(player => !player.eliminated).length;  // take the mean
+        total.total /= total.players.filter(player => !player.eliminated && player['round4']).length;  // take the mean
       });
       return totals;
     }));
