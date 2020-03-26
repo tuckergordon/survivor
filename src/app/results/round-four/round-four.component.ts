@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
-import { map } from 'rxjs/operators';
-import { TribeTotal, Player } from 'src/app/shared/models/survivor.model';
 import { Observable } from 'rxjs';
+import { TribeTotal, Player } from 'src/app/shared/models/survivor.model';
+import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-round-two',
-  templateUrl: './round-two.component.html',
-  styleUrls: ['./round-two.component.scss']
+  selector: 'app-round-four',
+  templateUrl: './round-four.component.html',
+  styleUrls: ['./round-four.component.scss']
 })
-export class RoundTwoComponent implements OnInit {
+export class RoundFourComponent implements OnInit {
   totals$: Observable<TribeTotal[]>;
   resultRows$: Observable<Array<[TribeTotal, TribeTotal]>>;
   max$: Observable<number>;
@@ -18,20 +18,20 @@ export class RoundTwoComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(2).pipe(map(totals => {
+    this.totals$ = this.dataService.getRoundTotals(4).pipe(map(totals => {
       totals.forEach(total => {
         total.total /= total.players.filter(player => !player.eliminated).length;  // take the mean
       });
       return totals;
     }));
-    this.eliminated$ = this.dataService.getRoundEliminated(2);
+    this.eliminated$ = this.dataService.getRoundEliminated(4);
     this.max$ = this.totals$.pipe(
       map(totals => {
         let max = 0;
         totals.forEach(total => {
           total.players.forEach(player => {
-            if (player['round2'] > max) {
-              max = player['round2'];
+            if (player['round4'] > max) {
+              max = player['round4'];
             }
           });
         });

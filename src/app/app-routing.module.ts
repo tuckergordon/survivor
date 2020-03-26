@@ -4,6 +4,7 @@ import { RosterComponent } from './roster/roster.component';
 import { RoundOneComponent } from './results/round-one/round-one.component';
 import { RoundTwoComponent } from './results/round-two/round-two.component';
 import { RoundThreeComponent } from './results/round-three/round-three.component';
+import { RoundFourComponent } from './results/round-four/round-four.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: '3',
         component: RoundThreeComponent,
+      },
+      {
+        path: '4',
+        component: RoundFourComponent,
       },
     ]
   },
