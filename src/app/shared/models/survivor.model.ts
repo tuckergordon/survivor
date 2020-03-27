@@ -12,6 +12,8 @@ export interface TribeDataModel {
   wins: number;
   losses: number;
   color?: string;
+  firstRound: number;
+  lastRound?: number;
 }
 
 export interface Tribe extends TribeDataModel {

@@ -1,0 +1,32 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round 5: Z-A</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">You must say the alphabet backwards (Z to A) in a timed video and I MUST HEAR EVERY
+        LETTER. If I don't hear every letter, you must do it again. If you don't get a video in by the deadline, I will
+        add 1 minute to the worst time and that will count as your time. The deadline to send me a video is 10 PM CST
+        tomorrow, Friday, March 26th. The team score will again be calculated by finding the average of the each
+        individual on the team's score. Please cover your eyes (hand, blindfold, etc.) to ensure this is done from memory!</p>
+    </mat-card-content>
+  </mat-card>
+  <!-- <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
+            [style.color]="player.tribe.color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card> -->
+</div>
+<!-- <app-result-row *ngFor="let row of (resultRows$ | async)" [totals]="row" [round]="5" [max]="max$ | async"
+  resultUnit="Time" sortDirection="asc"></app-result-row> -->

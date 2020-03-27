@@ -5,6 +5,7 @@ import { RoundOneComponent } from './results/round-one/round-one.component';
 import { RoundTwoComponent } from './results/round-two/round-two.component';
 import { RoundThreeComponent } from './results/round-three/round-three.component';
 import { RoundFourComponent } from './results/round-four/round-four.component';
+import { RoundFiveComponent } from './results/round-five/round-five.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: '4',
         component: RoundFourComponent,
+      },
+      {
+        path: '5',
+        component: RoundFiveComponent,
       },
     ]
   },

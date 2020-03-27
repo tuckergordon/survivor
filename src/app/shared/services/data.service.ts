@@ -62,7 +62,13 @@ export class DataService {
           }
           tribes[player.tribe.id].players.push(player);
         });
-        return Object.values<any>(tribes).sort((a, b) => a.id.localeCompare(b.id)); // TODO: type
+        return Object.values<any>(tribes).sort((a, b) => {
+          if (!a.lastRound && !b.lastRound) {
+            return a.id.localeCompare(b.id);
+          }
+          if (!a.lastRound) return -1;
+          return 1;
+        }); // TODO: type
       }),
       shareReplay(1)
     );
@@ -73,24 +79,26 @@ export class DataService {
     if (!round) return null;
     return this.getPlayersByTribe().pipe(
       map(tribes => {
-        const totals = tribes.map(tribe => {
-          let total = 0;
-          const players = [];
-          tribe.players.forEach(player => {
-            const score = +player['round' + round];
-            total += score;
-            players.push({
-              ...player,
-              score
+        const totals = tribes
+          .filter(tribe => tribe.firstRound <= round)
+          .map(tribe => {
+            let total = 0;
+            const players = [];
+            tribe.players.forEach(player => {
+              const score = +player['round' + round];
+              total += score;
+              players.push({
+                ...player,
+                score
+              });
+              // total += player.scores[round - 1];  // 1 indexing TODO: scores array
             });
-            // total += player.scores[round - 1];  // 1 indexing TODO: scores array
+            return {
+              ...tribe,
+              players,
+              total
+            } as TribeTotal;
           });
-          return {
-            ...tribe,
-            players,
-            total
-          } as TribeTotal;
-        });
         return totals;
       })
     );
@@ -112,7 +120,10 @@ export class DataService {
 
   getPlayers(): Observable<Player[]> {
     if (!this.players$) {
-      const rawData$ = this.http.get<Player[]>('assets/data/data.json');
+      const rawData$ = combineLatest([
+        this.http.get<Player[]>('assets/data/data.json').pipe(shareReplay(1)),
+        this.http.get<Player[]>('assets/data/data2.json').pipe(shareReplay(1))
+      ]).pipe(map(results => [...results[0], ...results[1]]));
 
       this.players$ = combineLatest([rawData$, this.getTribesMap()]).pipe(
         map(results => {
@@ -146,7 +157,10 @@ export class DataService {
 
   private _populateTribes() {
     if (!this.tribes$) {
-      this.tribes$ = this.http.get<TribeDataModel[]>('assets/data/tribes.json').pipe(shareReplay(1));
+      this.tribes$ = combineLatest([
+        this.http.get<TribeDataModel[]>('assets/data/tribes.json').pipe(shareReplay(1)),
+        this.http.get<TribeDataModel[]>('assets/data/tribes2.json').pipe(shareReplay(1))
+      ]).pipe(map(results => [...results[0], ...results[1]]));
       this.tribeMap$ = this.tribes$.pipe(
         map(tribes => {
           const tribesMap = {};

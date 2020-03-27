@@ -1,4 +1,5 @@
-<mat-card class="tribe-card" *ngFor="let tribe of (tribes$ | async)">
+<!-- TODO(tribes) -->
+<mat-card class="tribe-card" [class.old]="tribe.lastRound < 5" *ngFor="let tribe of (tribes$ | async)">
   <mat-card-header>
     <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + tribe.id + '.png'"
       [style.border-color]="tribe.color">
