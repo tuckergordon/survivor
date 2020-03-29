@@ -4,14 +4,14 @@
     "name": "Team 1",
     "color": "#01579b",
     "wins": 0,
-    "losses": 0,
-    "firstRound": 5
+    "losses": 1,
+    "firstRound": 1
   },
   {
     "id": "H",
-    "name": "Team 2",
+    "name": "Good Time for a Mustache",
     "color": "#b71c1c",
-    "wins": 0,
+    "wins": 2,
     "losses": 0,
     "firstRound": 5
   },
@@ -20,15 +20,15 @@
     "name": "Team 3",
     "color": "#ff6f00",
     "wins": 0,
-    "losses": 0,
+    "losses": 2,
     "firstRound": 5
   },
   {
     "id": "J",
-    "name": "Team 4",
+    "name": "The Quaran-Queens",
     "color": "#4a148c",
-    "wins": 0,
-    "losses": 0,
+    "wins": 1,
+    "losses": 1,
     "firstRound": 5
   }
 ]

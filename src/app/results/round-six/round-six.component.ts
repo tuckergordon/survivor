@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TribeTotal, Player } from 'src/app/shared/models/survivor.model';
-import { DataService } from 'src/app/shared/services/data.service';
 import { map } from 'rxjs/operators';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
-  selector: 'app-round-five',
-  templateUrl: './round-five.component.html',
-  styleUrls: ['./round-five.component.scss']
+  selector: 'app-round-six',
+  templateUrl: './round-six.component.html',
+  styleUrls: ['./round-six.component.scss']
 })
-export class RoundFiveComponent implements OnInit {
+export class RoundSixComponent implements OnInit {
   totals$: Observable<TribeTotal[]>;
   resultRows$: Observable<Array<[TribeTotal, TribeTotal]>>;
   players$: Observable<Player[]>;
   eliminated$: Observable<Player[]>;
 
-  readonly ROUND = 5;
+  readonly ROUND = 6;
 
   constructor(private dataService: DataService) { }
 
@@ -40,4 +40,5 @@ export class RoundFiveComponent implements OnInit {
       })
     );
   }
+
 }

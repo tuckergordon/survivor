@@ -1,0 +1,53 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round 5: Do you know how long a minute is?</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">In this challenge, you must send a video of yourself counting to 60 seconds (one
+        minute) with your eyes closed or blocked off. (No audio aids or any other BS either, unless it's coming from
+        your own mouth or elsewhere on your body.) The idea is to get as close to an actual minute as possible. Your
+        score will be the difference between your perceived minute and an actual minute. For example, if I count to 60
+        in 64 seconds, my score is 4.0 seconds. If I count to 60 in 56 seconds, my score is 4.0 seconds. You don't need
+        to announce every counting number aloud, but you do need to say "start" to begin, and "60" or "stop" or "done"
+        to finish and you do need to video the whole thing so that I can see how close to an actual minute you are. Team
+        with the lowest average score wins!</p>
+    </mat-card-content>
+  </mat-card>
+  <!-- <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
+            [style.color]="player.tribe.color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card> -->
+</div>
+<!-- <div style="display: flex; margin-bottom: 30px;">
+
+<mat-card class="chart-card" style="width: 100%; height: 600px">
+  <app-clock-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-clock-chart>
+</mat-card> -->
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let total of (totals$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + total.id + '.png'"
+          [style.border-color]="total.color">
+        <mat-card-title>{{ i + 1 }}. {{ total.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ ('' + total.total).slice(0, 4) }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-score-bar-chart>
+  </mat-card>
+</div>
