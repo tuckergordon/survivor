@@ -27,7 +27,7 @@ export class RoundSixComponent implements OnInit {
       return totals.sort((a, b) => a.total - b.total);
     }));
     this.players$ = this.dataService.getPlayers().pipe(
-      map(players => players.filter(player => 'round' + this.ROUND in player))
+      map(players => players.filter(player => 'round' + this.ROUND in player && !player.eliminated))
     );
     this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);
     this.resultRows$ = this.totals$.pipe(
