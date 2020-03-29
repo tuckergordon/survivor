@@ -18,7 +18,7 @@ export class RoundFourComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(4).pipe(map(totals => {
+    this.totals$ = this.dataService.getRoundTotalsByTribe(4).pipe(map(totals => {
       totals.forEach(total => {
         total.total /= total.players.filter(player => !player.eliminated && player['round4']).length;  // take the mean
       });

@@ -17,4 +17,15 @@ app-result-row {
     flex: 0 1 30%; 
     margin-left: 20px;
   }
+
+  .chart-card {
+    height: 700px;
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .result-card {
+    margin-bottom: 20px;
+  }
 }

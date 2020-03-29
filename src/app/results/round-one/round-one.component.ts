@@ -18,7 +18,7 @@ export class RoundOneComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(1);
+    this.totals$ = this.dataService.getRoundTotalsByTribe(1);
     this.eliminated$ = this.dataService.getRoundEliminated(1);
     this.max$ = this.totals$.pipe(
       map(totals => {

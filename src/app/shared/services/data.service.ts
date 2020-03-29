@@ -74,13 +74,24 @@ export class DataService {
     );
   }
 
+  // getRoundTotals(round: number) {
+  //   if (!round) return null;
+  //   return this.players$.pipe(
+  //     map(players => {
+  //       return players
+  //         .filter(player => player.tribe.firstRound <= round)
+  //         .map(player => )
+  //     })
+  //   )
+  // }
+
   // round 1 = 1
-  getRoundTotals(round: number): Observable<TribeTotal[]> {
+  getRoundTotalsByTribe(round: number): Observable<TribeTotal[]> {
     if (!round) return null;
     return this.getPlayersByTribe().pipe(
       map(tribes => {
         const totals = tribes
-          .filter(tribe => tribe.firstRound <= round)
+          .filter(tribe => tribe.firstRound <= round && !(tribe.lastRound < round))
           .map(tribe => {
             let total = 0;
             const players = [];
@@ -170,5 +181,9 @@ export class DataService {
         shareReplay(1)
       );
     }
+  }
+
+  static getFirstName(fullname: string) {
+    return fullname.replace(/ .*/, '');
   }
 }

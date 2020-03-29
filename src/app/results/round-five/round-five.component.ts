@@ -12,32 +12,25 @@ import { map } from 'rxjs/operators';
 export class RoundFiveComponent implements OnInit {
   totals$: Observable<TribeTotal[]>;
   resultRows$: Observable<Array<[TribeTotal, TribeTotal]>>;
-  max$: Observable<number>;
+  players$: Observable<Player[]>;
+  // max$: Observable<number>;
   eliminated$: Observable<Player[]>;
+
+  readonly ROUND = 5;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(4).pipe(map(totals => {
+    this.totals$ = this.dataService.getRoundTotalsByTribe(this.ROUND).pipe(map(totals => {
       totals.forEach(total => {
-        total.total /= total.players.filter(player => !player.eliminated && player['round5']).length;  // take the mean
+        total.total /= total.players.filter(player => !player.eliminated && player['round' + this.ROUND]).length;  // take the mean
       });
-      return totals;
+      return totals.sort((a, b) => a.total - b.total);
     }));
-    this.eliminated$ = this.dataService.getRoundEliminated(4);
-    this.max$ = this.totals$.pipe(
-      map(totals => {
-        let max = 0;
-        totals.forEach(total => {
-          total.players.forEach(player => {
-            if (player['round5'] > max) {
-              max = player['round5'];
-            }
-          });
-        });
-        return max;
-      })
+    this.players$ = this.dataService.getPlayers().pipe(
+      map(players => players.filter(player => 'round' + this.ROUND in player))
     );
+    this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);
     this.resultRows$ = this.totals$.pipe(
       map(totals => {
         const rows = [] as Array<[TribeTotal, TribeTotal]>;

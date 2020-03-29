@@ -18,7 +18,7 @@ export class RoundThreeComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(3).pipe(map(totals => {
+    this.totals$ = this.dataService.getRoundTotalsByTribe(3).pipe(map(totals => {
       totals.forEach(total => {
         total.total /= total.players.length;  // take the mean
       });

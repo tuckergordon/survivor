@@ -18,7 +18,7 @@ export class RoundTwoComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotals(2).pipe(map(totals => {
+    this.totals$ = this.dataService.getRoundTotalsByTribe(2).pipe(map(totals => {
       totals.forEach(total => {
         total.total /= total.players.filter(player => !player.eliminated).length;  // take the mean
       });
