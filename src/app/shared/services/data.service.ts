@@ -183,7 +183,9 @@ export class DataService {
     }
   }
 
-  static getFirstName(fullname: string) {
-    return fullname.replace(/ .*/, '');
+  // e.g. 'Tucker G.'
+  static getFirstNameLastInitial(fullname: string): string {
+    const names = fullname.split(' ');
+    return `${names[0]} ${names[1][0]}.`;
   }
 }

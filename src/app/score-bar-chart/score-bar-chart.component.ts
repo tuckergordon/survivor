@@ -94,7 +94,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
       .attr('y', d => this.scaleY(d.name) + (this.scaleY.bandwidth() + 10) / 2);
 
     const axisY = this.svg.select('.axis-y').call(
-      d3.axisLeft(this.scaleY).tickFormat(playerName => DataService.getFirstName(playerName)));
+      d3.axisLeft(this.scaleY).tickFormat(playerName => DataService.getFirstNameLastInitial(playerName)));
     axisY.select('.domain').remove();
     axisY.selectAll('line').remove();
   }
