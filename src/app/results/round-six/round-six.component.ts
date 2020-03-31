@@ -11,7 +11,6 @@ import { DataService } from 'src/app/shared/services/data.service';
 })
 export class RoundSixComponent implements OnInit {
   totals$: Observable<TribeTotal[]>;
-  resultRows$: Observable<Array<[TribeTotal, TribeTotal]>>;
   players$: Observable<Player[]>;
   eliminated$: Observable<Player[]>;
 
@@ -22,23 +21,20 @@ export class RoundSixComponent implements OnInit {
   ngOnInit(): void {
     this.totals$ = this.dataService.getRoundTotalsByTribe(this.ROUND).pipe(map(totals => {
       totals.forEach(total => {
-        total.total /= total.players.filter(player => !player.eliminated && player['round' + this.ROUND]).length;  // take the mean
+        total.total /= total.players.filter(player => {
+          const score = player['round' + this.ROUND];
+          return !!score || score === 0;
+        }).length;  // take the mean
       });
       return totals.sort((a, b) => a.total - b.total);
     }));
     this.players$ = this.dataService.getPlayers().pipe(
-      map(players => players.filter(player => 'round' + this.ROUND in player && !player.eliminated))
+      map(players => players.filter(player => {
+        const score = player['round' + this.ROUND];
+        return !!score || score === 0;
+      }))
     );
     this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);
-    this.resultRows$ = this.totals$.pipe(
-      map(totals => {
-        const rows = [] as Array<[TribeTotal, TribeTotal]>;
-        for (let i = 0; i < totals.length - 1; i += 2) {
-          rows.push([totals[i], totals[i + 1]]);
-        }
-        return rows;
-      })
-    );
   }
 
 }
