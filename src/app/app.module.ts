@@ -26,6 +26,7 @@ import { RoundFiveComponent } from './results/round-five/round-five.component';
 import { ScoreBarChartComponent } from './score-bar-chart/score-bar-chart.component';
 // import { ClockChartComponent } from './clock-chart/clock-chart.component';
 import { RoundSixComponent } from './results/round-six/round-six.component';
+import { RoundSevenComponent } from './results/round-seven/round-seven.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { RoundSixComponent } from './results/round-six/round-six.component';
     RoundFiveComponent,
     ScoreBarChartComponent,
     // ClockChartComponent,
-    RoundSixComponent
+    RoundSixComponent,
+    RoundSevenComponent
   ],
   imports: [
     BrowserModule,

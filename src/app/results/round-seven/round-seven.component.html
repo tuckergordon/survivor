@@ -1,20 +1,18 @@
 <div class="round-header-cards">
   <mat-card class="round-header-card" style="flex: 1 1 80%;">
     <mat-card-header>
-      <mat-card-title>Round 6: Do you know how long a minute is?</mat-card-title>
+      <mat-card-title>Round {{ ROUND }}: Hang a Spoon on Your Nose</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p class="round-description">In this challenge, you must send a video of yourself counting to 60 seconds (one
-        minute) with your eyes closed or blocked off. (No audio aids or any other BS either, unless it's coming from
-        your own mouth or elsewhere on your body.) The idea is to get as close to an actual minute as possible. Your
-        score will be the difference between your perceived minute and an actual minute. For example, if I count to 60
-        in 64 seconds, my score is 4.0 seconds. If I count to 60 in 56 seconds, my score is 4.0 seconds. You don't need
-        to announce every counting number aloud, but you do need to say "start" to begin, and "60" or "stop" or "done"
-        to finish and you do need to video the whole thing so that I can see how close to an actual minute you are. Team
-        with the lowest average score wins!</p>
+      <p class="round-description">Your goal is to have a metal spoon hang on your nose for as long as possible without
+        it falling off. You may make as many attempts as you'd like. Do not use any <a
+          href="https://www.youtube.com/watch?v=gbEHAsZxRYo">foreign substances</a> to help the spoon
+        adhere to your nose. The spoon should be resting with its concave side on your nose, and your nose should be
+        perpendicular to the ground. Please send video of your best attempt. Your team's score will be an average of
+        each individual's time with spoon on nose—highest time wins. Good night, and good luck.</p>
     </mat-card-content>
   </mat-card>
-  <mat-card class="round-header-card eliminated-card">
+  <!-- <mat-card class="round-header-card eliminated-card">
     <mat-card-header>
       <mat-card-title>Eliminated</mat-card-title>
     </mat-card-header>
@@ -29,14 +27,15 @@
         </div>
       </div>
     </mat-card-content>
-  </mat-card>
+  </mat-card> -->
 </div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IpT5SBg1Mmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <!-- <div style="display: flex; margin-bottom: 30px;">
 
 <mat-card class="chart-card" style="width: 100%; height: 600px">
   <app-clock-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-clock-chart>
 </mat-card> -->
-<div style="display: flex; margin-bottom: 30px;">
+<!-- <div style="display: flex; margin-bottom: 30px;">
   <div class="result-cards">
     <mat-card *ngFor="let total of (totals$ | async); let i = index" class="result-card">
       <mat-card-header>
@@ -48,6 +47,6 @@
     </mat-card>
   </div>
   <mat-card class="chart-card">
-    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-score-bar-chart>
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"></app-score-bar-chart>
   </mat-card>
-</div>
+</div> -->
