@@ -26,7 +26,7 @@ export class RoundSevenComponent implements OnInit {
           return !!score || score === 0;
         }).length;  // take the mean
       });
-      return totals.sort((a, b) => a.total - b.total);
+      return totals.sort((a, b) => b.total - a.total);
     }));
     this.players$ = this.dataService.getPlayers().pipe(
       map(players => players.filter(player => {

@@ -9,8 +9,7 @@ export interface Player {
 export interface TribeDataModel {
   name: string;
   id: string;
-  wins: number;
-  losses: number;
+  councils: number;
   color?: string;
   firstRound: number;
   lastRound?: number;

@@ -1,13 +1,15 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit, HostListener, Pipe } from '@angular/core';
 import { Player } from '../shared/models/survivor.model';
 
 import * as d3 from 'd3';
 import { DataService } from '../shared/services/data.service';
+import { MinuteSecondsPipe } from '../shared/pipes/minute-seconds.pipe';
 
 @Component({
   selector: 'app-score-bar-chart',
   templateUrl: './score-bar-chart.component.html',
-  styleUrls: ['./score-bar-chart.component.scss']
+  styleUrls: ['./score-bar-chart.component.scss'],
+  providers: [MinuteSecondsPipe]
 })
 export class ScoreBarChartComponent implements OnInit, AfterViewInit {
 
@@ -16,14 +18,15 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
 
   @Input() players: Player[];
   @Input() round: number;
-  @Input() resultUnit = 'Time';
+  @Input() resultUnit: 's' | 'm:s' = 's';
+  @Input() resultPipe?;  // TODO: type
   @Input() sortDirection: 'asc' | 'desc' = 'asc';
 
   private readonly MARGINS = {
     top: 5,
     bottom: 5,
     left: 30,
-    right: 50
+    right: 55
   };
 
   chartWidth: number;
@@ -31,7 +34,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
   scaleY: d3.ScaleBand<string>;
   scaleX: d3.ScaleLinear<number, number>;
 
-  constructor() { }
+  constructor(private minuteSecondsPipe: MinuteSecondsPipe) { }
 
   ngOnInit(): void {
     this.players = this.sortPlayers(this.players);
@@ -87,7 +90,10 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
       .join(
         enter => enter.append('text')
           .attr('class', 'label')
-          .text(player => player['round' + this.round])
+          .text(player => {
+            const score = player['round' + this.round];
+            return this.resultUnit === 'm:s' ? this.minuteSecondsPipe.transform(score) : score;
+          })
           .attr('font-size', 10)
       )
       .attr('x', d => this.MARGINS.left + this.scaleX(d['round' + this.round]) + 3)

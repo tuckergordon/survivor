@@ -4,7 +4,7 @@
     <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + tribe.id + '.png'"
       [style.border-color]="tribe.color">
     <mat-card-title>{{tribe.name}}</mat-card-title>
-    <mat-card-subtitle>({{tribe.wins}}, {{tribe.losses}})</mat-card-subtitle>
+    <mat-card-subtitle>Tribal Councils: {{ tribe.councils }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <ul>
@@ -21,3 +21,4 @@
     </ul>
   </mat-card-content>
 </mat-card>
+<p style="font-style: italic;">* = player was eliminated but brought back</p>
