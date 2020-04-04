@@ -1,0 +1,52 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Staring Contest</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">YOU GET ONE CHANCE TO DO THIS CHALLENGE
+        <br><br>
+        This is a staring contest. Open up your phone camera, and stare into it for as long as you can. As soon as you
+        blink, the timer stops. The team with the highest average length of continued stare will be immune.
+        Additionally, the player on each losing team with the best time will be immune. So for losing teams, one person
+        will be immune at Tribal Council</p>
+    </mat-card-content>
+  </mat-card>
+  <!-- <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
+            [style.color]="player.tribe.color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card> -->
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wmodU1uK5V8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!-- <div style="display: flex; margin-bottom: 30px;">
+
+<mat-card class="chart-card" style="width: 100%; height: 600px">
+  <app-clock-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-clock-chart>
+</mat-card> -->
+<!-- <div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let total of (totals$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + total.id + '.png'"
+          [style.border-color]="total.color">
+        <mat-card-title>{{ i + 1 }}. {{ total.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ total.total | minuteSeconds }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="m:s"></app-score-bar-chart>
+  </mat-card>
+</div> -->
