@@ -8,6 +8,7 @@ import { RoundFourComponent } from './results/round-four/round-four.component';
 import { RoundFiveComponent } from './results/round-five/round-five.component';
 import { RoundSixComponent } from './results/round-six/round-six.component';
 import { RoundSevenComponent } from './results/round-seven/round-seven.component';
+import { RoundEightComponent } from './results/round-eight/round-eight.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
       {
         path: '7',
         component: RoundSevenComponent,
+      },
+      {
+        path: '8',
+        component: RoundEightComponent,
       },
     ]
   },

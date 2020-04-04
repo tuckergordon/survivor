@@ -1,0 +1,51 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Wallsits</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">To win this challenge, your team must have the highest average wall sit time. The
+        challenge is to do a wall sit for as long as possible. You cannot put anything in front of your feet and you
+        cannot touch your legs during the wall sit. The beginning of the wall sit will be when your legs form a right
+        angle. The end will be when the right angle is no longer sustained.</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
+            [style.color]="player.tribe.color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IpT5SBg1Mmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- <div style="display: flex; margin-bottom: 30px;">
+
+<mat-card class="chart-card" style="width: 100%; height: 600px">
+  <app-clock-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-clock-chart>
+</mat-card> -->
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let total of (totals$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + total.id + '.png'"
+          [style.border-color]="total.color">
+        <mat-card-title>{{ i + 1 }}. {{ total.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ total.total | minuteSeconds }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="m:s"></app-score-bar-chart>
+  </mat-card>
+</div>
