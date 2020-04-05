@@ -64,7 +64,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
 
   update() {
     this.scaleX = d3.scaleLinear<number, number>()
-      .domain([0, d3.max(this.players.map(player => player['round' + this.round]))])
+      .domain([0, d3.max(this.players.map(player => DataService.getPlayerScore(player, this.round)))])
       .range([0, this.chartWidth]);
 
     this.scaleY = d3.scaleBand<string>()
@@ -77,11 +77,11 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
       .data(this.players, player => player.name)
       .join(
         enter => enter.append('rect')
-          .attr('fill', player => player.tribe.color)
+          .attr('fill', player => DataService.getPlayerTribe(player, this.round).color)
       )
       .attr('x', this.MARGINS.left)
       .attr('y', d => this.scaleY(d.name))
-      .attr('width', d => this.scaleX(d['round' + this.round]))
+      .attr('width', d => this.scaleX(DataService.getPlayerScore(d, this.round)))
       .attr('height', this.scaleY.bandwidth());
 
     this.svg.select('.labels')
@@ -91,12 +91,12 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
         enter => enter.append('text')
           .attr('class', 'label')
           .text(player => {
-            const score = player['round' + this.round];
+            const score = DataService.getPlayerScore(player, this.round);
             return this.resultUnit === 'm:s' ? this.minuteSecondsPipe.transform(score) : score;
           })
           .attr('font-size', 10)
       )
-      .attr('x', d => this.MARGINS.left + this.scaleX(d['round' + this.round]) + 3)
+      .attr('x', d => this.MARGINS.left + this.scaleX(DataService.getPlayerScore(d, this.round)) + 3)
       .attr('y', d => this.scaleY(d.name) + (this.scaleY.bandwidth() + 10) / 2);
 
     const axisY = this.svg.select('.axis-y').call(
@@ -106,11 +106,11 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
   }
 
   sortPlayers(players: Player[]) {
-    return players.sort((a, b) => {
-      if (this.sortDirection === 'asc') {
-        return a['round' + this.round] - b['round' + this.round]; // TODO: rounds
-      }
-      return b['round' + this.round] - a['round' + this.round]; // TODO: rounds
+    // tslint:disable-next-line: variable-name
+    return players.sort((_a, _b) => {
+      const a = DataService.getPlayerScore(_a, this.round);
+      const b = DataService.getPlayerScore(_b, this.round);
+      return this.sortDirection === 'asc' ? a - b : b - a;
     });
   }
 
