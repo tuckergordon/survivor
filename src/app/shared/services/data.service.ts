@@ -30,7 +30,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getPlayers(options?: GetPlayerOptions): Observable<Player[]> {
+  getPlayers(options: GetPlayerOptions): Observable<Player[]> {
     if (!this.players$) {
       const rawData$ = this.http.get<PlayerDataModel[]>('assets/data/data-full.json')
         .pipe(shareReplay(1));
@@ -124,6 +124,12 @@ export class DataService {
         const b = _b.score;
         return sortBy === SortBy.DESC ? b - a : a - b;
       });
+    }));
+  }
+
+  getRoundEliminated(round: number): Observable<Player[]> {
+    return this.getPlayers({ round }).pipe(map(players => {
+      return players.filter(player => player.firstElim === round || player.secondElim === round);
     }));
   }
 

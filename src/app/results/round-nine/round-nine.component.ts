@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TribeTotal, Player, Round } from 'src/app/shared/models/survivor.model';
+import { Player, Round, Tribe } from 'src/app/shared/models/survivor.model';
 import { DataService, AggregateBy, SortBy } from 'src/app/shared/services/data.service';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-round-nine',
@@ -12,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class RoundNineComponent implements OnInit {
   players$: Observable<Player[]>;
   tribeScores$: Observable<Round[]>;
-  // eliminated$: Observable<Player[]>;
+  eliminated$: Observable<Player[]>;
 
   readonly ROUND = 9;
 
@@ -21,6 +20,10 @@ export class RoundNineComponent implements OnInit {
   ngOnInit(): void {
     this.tribeScores$ = this.dataService.getTribeScores(this.ROUND, AggregateBy.AVG, SortBy.DESC);
     this.players$ = this.dataService.getPlayers({ round: this.ROUND });
-    // this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);  // TODO: implement eliminated in refactor
+    this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);  // TODO: implement eliminated in refactor
+  }
+  
+  getPlayerTribe(player: Player): Tribe {
+    return DataService.getPlayerTribe(player, this.ROUND);
   }
 }

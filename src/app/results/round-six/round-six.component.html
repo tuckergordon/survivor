@@ -22,8 +22,8 @@
       <div class="eliminated-players">
         <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
           <div class="tribe-icon" mat-card-avatar
-            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
-            [style.color]="player.tribe.color">
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
           </div>
           <span class="eliminated-player__name">{{ player.name }}</span>
         </div>
@@ -31,23 +31,18 @@
     </mat-card-content>
   </mat-card>
 </div>
-<!-- <div style="display: flex; margin-bottom: 30px;">
-
-<mat-card class="chart-card" style="width: 100%; height: 600px">
-  <app-clock-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-clock-chart>
-</mat-card> -->
 <div style="display: flex; margin-bottom: 30px;">
   <div class="result-cards">
-    <mat-card *ngFor="let total of (totals$ | async); let i = index" class="result-card">
+    <mat-card *ngFor="let score of (tribeScores$ | async); let i = index" class="result-card">
       <mat-card-header>
-        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + total.id + '.png'"
-          [style.border-color]="total.color">
-        <mat-card-title>{{ i + 1 }}. {{ total.name }}</mat-card-title>
-        <mat-card-subtitle>Avg: {{ ('' + total.total).slice(0, 4) }}</mat-card-subtitle>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
+          [style.border-color]="score.tribe.color">
+        <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ ('' + score.score).slice(0, 4) }}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>
   <mat-card class="chart-card">
-    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-score-bar-chart>
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="ASC"></app-score-bar-chart>
   </mat-card>
 </div>

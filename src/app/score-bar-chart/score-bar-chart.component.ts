@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit, HostLis
 import { Player } from '../shared/models/survivor.model';
 
 import * as d3 from 'd3';
-import { DataService } from '../shared/services/data.service';
+import { DataService, SortBy } from '../shared/services/data.service';
 import { MinuteSecondsPipe } from '../shared/pipes/minute-seconds.pipe';
 
 @Component({
@@ -20,7 +20,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
   @Input() round: number;
   @Input() resultUnit: 's' | 'm:s' = 's';
   @Input() resultPipe?;  // TODO: type
-  @Input() sortDirection: 'asc' | 'desc' = 'asc';
+  @Input() sortDirection: SortBy = SortBy.DESC;
 
   private readonly MARGINS = {
     top: 5,
@@ -110,7 +110,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
     return players.sort((_a, _b) => {
       const a = DataService.getPlayerScore(_a, this.round);
       const b = DataService.getPlayerScore(_b, this.round);
-      return this.sortDirection === 'asc' ? a - b : b - a;
+      return this.sortDirection === SortBy.ASC ? a - b : b - a;
     });
   }
 

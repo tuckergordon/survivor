@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TribeTotal, Player } from 'src/app/shared/models/survivor.model';
-import { DataService } from 'src/app/shared/services/data.service';
-import { map } from 'rxjs/operators';
+import { Player, Round, Tribe } from 'src/app/shared/models/survivor.model';
+import { DataService, AggregateBy, SortBy } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-round-eight',
@@ -10,8 +9,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./round-eight.component.scss']
 })
 export class RoundEightComponent implements OnInit {
-  totals$: Observable<TribeTotal[]>;
   players$: Observable<Player[]>;
+  tribeScores$: Observable<Round[]>;
   eliminated$: Observable<Player[]>;
 
   readonly ROUND = 8;
@@ -19,21 +18,12 @@ export class RoundEightComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.totals$ = this.dataService.getRoundTotalsByTribe(this.ROUND).pipe(map(totals => {
-      totals.forEach(total => {
-        total.total /= total.players.filter(player => {
-          const score = player['round' + this.ROUND];
-          return !!score || score === 0;
-        }).length;  // take the mean
-      });
-      return totals.sort((a, b) => b.total - a.total);
-    }));
-    this.players$ = this.dataService.getPlayers().pipe(
-      map(players => players.filter(player => {
-        const score = player['round' + this.ROUND];
-        return !!score || score === 0;
-      }))
-    );
-    this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);
+    this.tribeScores$ = this.dataService.getTribeScores(this.ROUND, AggregateBy.AVG, SortBy.DESC);
+    this.players$ = this.dataService.getPlayers({ round: this.ROUND });
+    this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);  // TODO: implement eliminated in refactor
+  }
+
+  getPlayerTribe(player: Player): Tribe {
+    return DataService.getPlayerTribe(player, this.ROUND);
   }
 }
