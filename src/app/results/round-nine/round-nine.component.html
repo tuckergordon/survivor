@@ -29,12 +29,8 @@
     </mat-card-content>
   </mat-card> -->
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wmodU1uK5V8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!-- <div style="display: flex; margin-bottom: 30px;">
 
-<mat-card class="chart-card" style="width: 100%; height: 600px">
-  <app-clock-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND"></app-clock-chart>
-</mat-card> -->
-<!-- <div style="display: flex; margin-bottom: 30px;">
+<div style="display: flex; margin-bottom: 30px;">
   <div class="result-cards">
     <mat-card *ngFor="let total of (totals$ | async); let i = index" class="result-card">
       <mat-card-header>
@@ -49,4 +45,4 @@
     <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
       resultUnit="m:s"></app-score-bar-chart>
   </mat-card>
-</div> -->
+</div>
