@@ -1,38 +1,5 @@
 [
   {
-    "name": "Alek Sayers",
-    "email": "alekzander.sayers@gmail.com",
-    "tribe": "J",
-    "eliminated": "",
-    "round5": 5.9,
-    "round6": 4.3,
-    "round7": 320,
-    "round8": 113,
-    "round9": 83
-  },
-  {
-    "name": "Alex Burns",
-    "email": "acburns14@gmail.com",
-    "tribe": "I",
-    "eliminated": 9,
-    "round5": 6,
-    "round6": 5.5,
-    "round7": 896,
-    "round8": 120,
-    "round9": 120
-  },
-  {
-    "name": "Annie Share",
-    "email": "annieshare@aol.com",
-    "tribe": "J",
-    "eliminated": 9,
-    "round5": 4.2,
-    "round6": 1.3,
-    "round7": 144,
-    "round8": 145,
-    "round9": 68
-  },
-  {
     "name": "Brooke Goddard",
     "email": "brookegoddard119@gmail.com",
     "tribe": "G",
@@ -41,18 +8,8 @@
     "round6": 8.5,
     "round7": 4727,
     "round8": 189,
-    "round9": 367
-  },
-  {
-    "name": "Cam DeWet",
-    "email": "cam.dewet@gmail.com",
-    "tribe": "H",
-    "eliminated": 7,
-    "round5": 12,
-    "round6": 23,
-    "round7": 2284,
-    "round8": "",
-    "round9": ""
+    "round9": 367,
+    "round10": 78110
   },
   {
     "name": "Connor Evans",
@@ -63,73 +20,8 @@
     "round6": 1.7,
     "round7": "",
     "round8": "",
-    "round9": ""
-  },
-  {
-    "name": "Connor Evans*",
-    "email": "cbevans520@gmail.com",
-    "tribe": "K",
-    "eliminated": "",
-    "round5": "",
-    "round6": "",
-    "round7": 2510,
-    "round8": 88,
-    "round9": 193
-  },
-  {
-    "name": "Danny Mejia*",
-    "email": "dannymejia94@gmail.com",
-    "tribe": "K",
-    "eliminated": "",
-    "round5": "",
-    "round6": "",
-    "round7": 4356,
-    "round8": 95,
-    "round9": 33
-  },
-  {
-    "name": "Eli Millen",
-    "email": "elijahmillen@gmail.com",
-    "tribe": "K",
-    "eliminated": 8,
-    "round5": "",
-    "round6": "",
-    "round7": "",
-    "round8": 120,
-    "round9": ""
-  },
-  {
-    "name": "Emily Spanbock",
-    "email": "espanbock@gmail.com",
-    "tribe": "I",
-    "eliminated": "",
-    "round5": 9,
-    "round6": 1.9,
-    "round7": 1621,
-    "round8": 210,
-    "round9": 230
-  },
-  {
-    "name": "Grace Petr",
-    "email": "grpetr@gmail.com",
-    "tribe": "J",
-    "eliminated": "",
-    "round5": 5,
-    "round6": 0.7,
-    "round7": 213,
-    "round8": 154,
-    "round9": 37
-  },
-  {
-    "name": "Hannah Leblanc",
-    "email": "hrleblanc@gmail.com",
-    "tribe": "H",
-    "eliminated": "",
-    "round5": 2.5,
-    "round6": 0.8,
-    "round7": 408,
-    "round8": 184,
-    "round9": 42
+    "round9": "",
+    "round10": ""
   },
   {
     "name": "Hannah Rafkin",
@@ -140,62 +32,8 @@
     "round6": 4,
     "round7": 354,
     "round8": 146,
-    "round9": 1270
-  },
-  {
-    "name": "Ian McMahan",
-    "email": "mcmahian@gmail.com",
-    "tribe": "I",
-    "eliminated": 6,
-    "round5": 6,
-    "round6": 3,
-    "round7": "",
-    "round8": "",
-    "round9": ""
-  },
-  {
-    "name": "Ian Weider",
-    "email": "ian.weider@gmail.com",
-    "tribe": "I",
-    "eliminated": 8,
-    "round5": 34,
-    "round6": 1.4,
-    "round7": 222,
-    "round8": 245,
-    "round9": ""
-  },
-  {
-    "name": "Jake Kuhn",
-    "email": "jakekuhn17@gmail.com",
-    "tribe": "J",
-    "eliminated": "",
-    "round5": 3,
-    "round6": 4.5,
-    "round7": 225,
-    "round8": 131,
-    "round9": 114
-  },
-  {
-    "name": "James Jelin*",
-    "email": "jameshrjelin@gmail.com",
-    "tribe": "K",
-    "eliminated": "",
-    "round5": "",
-    "round6": "",
-    "round7": 1566,
-    "round8": 190,
-    "round9": 45
-  },
-  {
-    "name": "Jenny Ibsen",
-    "email": "jenny.ibsen@gmail.com",
-    "tribe": "H",
-    "eliminated": "",
-    "round5": 4.1,
-    "round6": 0.6,
-    "round7": 1292,
-    "round8": 96,
-    "round9": 123
+    "round9": 1270,
+    "round10": 66940
   },
   {
     "name": "Joe Seibert",
@@ -206,7 +44,8 @@
     "round6": 37.8,
     "round7": 3360,
     "round8": 110,
-    "round9": 180
+    "round9": 180,
+    "round10": 269180
   },
   {
     "name": "Jono Gruber",
@@ -217,51 +56,8 @@
     "round6": 6.2,
     "round7": 539,
     "round8": 180,
-    "round9": 180
-  },
-  {
-    "name": "Julian Andrews*",
-    "email": "julian.w.andrews@gmail.com",
-    "tribe": "K",
-    "eliminated": "",
-    "round5": "",
-    "round6": "",
-    "round7": 2546,
-    "round8": 137,
-    "round9": 149
-  },
-  {
-    "name": "Juliet Eyraud*",
-    "email": "juliet.eyraud@gmail.com",
-    "tribe": "K",
-    "eliminated": "",
-    "round5": "",
-    "round6": "",
-    "round7": 1824,
-    "round8": 362,
-    "round9": 16
-  },
-  {
-    "name": "K Irving",
-    "email": "kirving2@bowdoin.edu",
-    "tribe": "H",
-    "eliminated": 9,
-    "round5": 2.8,
-    "round6": 3.1,
-    "round7": 264,
-    "round8": 63,
-    "round9": 91
-  },
-  {
-    "name": "Katie Semple",
-    "email": "katiessemple@gmail.com",
-    "tribe": "J",
-    "eliminated": "",
-    "round5": 11,
-    "round6": 0.3,
-    "round7": 1034,
-    "round8": 271,
-    "round9": 22
+    "round9": 180,
+    "round10": 219390
   },
   {
     "name": "Kenny Shapiro",
@@ -272,40 +68,8 @@
     "round6": 1.1,
     "round7": 1890,
     "round8": 261,
-    "round9": 661
-  },
-  {
-    "name": "Kira Gabriel",
-    "email": "kkgabriel16@gmail.com",
-    "tribe": "J",
-    "eliminated": 8,
-    "round5": 7.5,
-    "round6": 3,
-    "round7": 1284,
-    "round8": 180,
-    "round9": ""
-  },
-  {
-    "name": "Lee Raymond Melbourne Weaver",
-    "email": "leeraymelwea@gmail.com",
-    "tribe": "I",
-    "eliminated": 5,
-    "round5": 4,
-    "round6": "",
-    "round7": "",
-    "round8": "",
-    "round9": ""
-  },
-  {
-    "name": "Lee Raymond Melbourne Weaver*",
-    "email": "leeraymelwea@gmail.com",
-    "tribe": "K",
-    "eliminated": 9,
-    "round5": "",
-    "round6": "",
-    "round7": 1621,
-    "round8": 150,
-    "round9": 96
+    "round9": 661,
+    "round10": 2347710
   },
   {
     "name": "Leo Levine",
@@ -316,95 +80,8 @@
     "round6": 1.5,
     "round7": 67,
     "round8": 116,
-    "round9": 49
-  },
-  {
-    "name": "Maddie Bustamante",
-    "email": "maddie.bustamante@gmail.com",
-    "tribe": "H",
-    "eliminated": 8,
-    "round5": 2.8,
-    "round6": 1.7,
-    "round7": 1500,
-    "round8": 198,
-    "round9": ""
-  },
-  {
-    "name": "Maria Wittenauer",
-    "email": "wittenauer.maria@gmail.com",
-    "tribe": "I",
-    "eliminated": 7,
-    "round5": 3.9,
-    "round6": 22.4,
-    "round7": 518,
-    "round8": "",
-    "round9": ""
-  },
-  {
-    "name": "Michael Brackney",
-    "email": "brackney.michael@gmail.com",
-    "tribe": "I",
-    "eliminated": "",
-    "round5": 6.1,
-    "round6": 1.6,
-    "round7": 723,
-    "round8": 99,
-    "round9": 228
-  },
-  {
-    "name": "Raj Sanghvi",
-    "email": "sanghvi.raj.j@gmail.com",
-    "tribe": "J",
-    "eliminated": 7,
-    "round5": 2.8,
-    "round6": 2.8,
-    "round7": 3,
-    "round8": "",
-    "round9": ""
-  },
-  {
-    "name": "Ryan Sanderson",
-    "email": "rasanders16@gmail.com",
-    "tribe": "H",
-    "eliminated": "",
-    "round5": 2.6,
-    "round6": 2,
-    "round7": 1201,
-    "round8": 90,
-    "round9": 233
-  },
-  {
-    "name": "Sam Chase",
-    "email": "sambchase@gmail.com",
-    "tribe": "H",
-    "eliminated": "",
-    "round5": 2.6,
-    "round6": 11.3,
-    "round7": 933,
-    "round8": 197,
-    "round9": 343
-  },
-  {
-    "name": "Sam Williams",
-    "email": "sam.harvey.williams@gmail.com",
-    "tribe": "I",
-    "eliminated": "",
-    "round5": 4.4,
-    "round6": 1.1,
-    "round7": 294,
-    "round8": 223,
-    "round9": 335
-  },
-  {
-    "name": "Sean Koch",
-    "email": "seankochcomedy@gmail.com",
-    "tribe": "J",
-    "eliminated": "",
-    "round5": 2.4,
-    "round6": 0,
-    "round7": 770,
-    "round8": 267,
-    "round9": 1388
+    "round9": 49,
+    "round10": 245310
   },
   {
     "name": "Sophie de Bruijn",
@@ -415,51 +92,8 @@
     "round6": 12,
     "round7": 153,
     "round8": 451,
-    "round9": 188
-  },
-  {
-    "name": "Sydney McDonald",
-    "email": "sydneymcdonald22@gmail.com",
-    "tribe": "I",
-    "eliminated": "",
-    "round5": 8,
-    "round6": 6.2,
-    "round7": 616,
-    "round8": 120,
-    "round9": 59
-  },
-  {
-    "name": "Taylor Tolleson",
-    "email": "taylorlainetolleson@gmail.com",
-    "tribe": "J",
-    "eliminated": 5,
-    "round5": 8,
-    "round6": "",
-    "round7": "",
-    "round8": "",
-    "round9": ""
-  },
-  {
-    "name": "Taylor Tolleson*",
-    "email": "taylorlainetolleson@gmail.com",
-    "tribe": "K",
-    "eliminated": "",
-    "round5": "",
-    "round6": "",
-    "round7": 1913,
-    "round8": 121,
-    "round9": 319
-  },
-  {
-    "name": "Tessa Westfall",
-    "email": "tessacwestfall@gmail.com",
-    "tribe": "H",
-    "eliminated": "",
-    "round5": 3.2,
-    "round6": 5.1,
-    "round7": 610,
-    "round8": 125,
-    "round9": 204
+    "round9": 188,
+    "round10": 423150
   },
   {
     "name": "Thomas Freeman",
@@ -470,7 +104,104 @@
     "round6": 35,
     "round7": 220,
     "round8": "",
-    "round9": ""
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Cam DeWet",
+    "email": "cam.dewet@gmail.com",
+    "tribe": "H",
+    "eliminated": 7,
+    "round5": 12,
+    "round6": 23,
+    "round7": 2284,
+    "round8": "",
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Hannah Leblanc",
+    "email": "hrleblanc@gmail.com",
+    "tribe": "H",
+    "eliminated": "",
+    "round5": 2.5,
+    "round6": 0.8,
+    "round7": 408,
+    "round8": 184,
+    "round9": 42,
+    "round10": 346920
+  },
+  {
+    "name": "Jenny Ibsen",
+    "email": "jenny.ibsen@gmail.com",
+    "tribe": "H",
+    "eliminated": "",
+    "round5": 4.1,
+    "round6": 0.6,
+    "round7": 1292,
+    "round8": 96,
+    "round9": 123,
+    "round10": 88220
+  },
+  {
+    "name": "K Irving",
+    "email": "kirving2@bowdoin.edu",
+    "tribe": "H",
+    "eliminated": 9,
+    "round5": 2.8,
+    "round6": 3.1,
+    "round7": 264,
+    "round8": 63,
+    "round9": 91,
+    "round10": ""
+  },
+  {
+    "name": "Maddie Bustamante",
+    "email": "maddie.bustamante@gmail.com",
+    "tribe": "H",
+    "eliminated": 8,
+    "round5": 2.8,
+    "round6": 1.7,
+    "round7": 1500,
+    "round8": 198,
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Ryan Sanderson",
+    "email": "rasanders16@gmail.com",
+    "tribe": "H",
+    "eliminated": "",
+    "round5": 2.6,
+    "round6": 2,
+    "round7": 1201,
+    "round8": 90,
+    "round9": 233,
+    "round10": 327040
+  },
+  {
+    "name": "Sam Chase",
+    "email": "sambchase@gmail.com",
+    "tribe": "H",
+    "eliminated": "",
+    "round5": 2.6,
+    "round6": 11.3,
+    "round7": 933,
+    "round8": 197,
+    "round9": 343,
+    "round10": 444060
+  },
+  {
+    "name": "Tessa Westfall",
+    "email": "tessacwestfall@gmail.com",
+    "tribe": "H",
+    "eliminated": "",
+    "round5": 3.2,
+    "round6": 5.1,
+    "round7": 610,
+    "round8": 125,
+    "round9": 204,
+    "round10": 238350
   },
   {
     "name": "Tucker Gordon",
@@ -481,6 +212,319 @@
     "round6": 0.2,
     "round7": 831,
     "round8": 175,
-    "round9": 216
+    "round9": 216,
+    "round10": 1870850
+  },
+  {
+    "name": "Alex Burns",
+    "email": "acburns14@gmail.com",
+    "tribe": "I",
+    "eliminated": 9,
+    "round5": 6,
+    "round6": 5.5,
+    "round7": 896,
+    "round8": 120,
+    "round9": 120,
+    "round10": ""
+  },
+  {
+    "name": "Emily Spanbock",
+    "email": "espanbock@gmail.com",
+    "tribe": "I",
+    "eliminated": "",
+    "round5": 9,
+    "round6": 1.9,
+    "round7": 1621,
+    "round8": 210,
+    "round9": 230,
+    "round10": 201130
+  },
+  {
+    "name": "Ian McMahan",
+    "email": "mcmahian@gmail.com",
+    "tribe": "I",
+    "eliminated": 6,
+    "round5": 6,
+    "round6": 3,
+    "round7": "",
+    "round8": "",
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Ian Weider",
+    "email": "ian.weider@gmail.com",
+    "tribe": "I",
+    "eliminated": 8,
+    "round5": 34,
+    "round6": 1.4,
+    "round7": 222,
+    "round8": 245,
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Lee Raymond Melbourne Weaver",
+    "email": "leeraymelwea@gmail.com",
+    "tribe": "I",
+    "eliminated": 5,
+    "round5": 4,
+    "round6": "",
+    "round7": "",
+    "round8": "",
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Maria Wittenauer",
+    "email": "wittenauer.maria@gmail.com",
+    "tribe": "I",
+    "eliminated": 7,
+    "round5": 3.9,
+    "round6": 22.4,
+    "round7": 518,
+    "round8": "",
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Michael Brackney",
+    "email": "brackney.michael@gmail.com",
+    "tribe": "I",
+    "eliminated": "",
+    "round5": 6.1,
+    "round6": 1.6,
+    "round7": 723,
+    "round8": 99,
+    "round9": 228,
+    "round10": 1339720
+  },
+  {
+    "name": "Sam Williams",
+    "email": "sam.harvey.williams@gmail.com",
+    "tribe": "I",
+    "eliminated": "",
+    "round5": 4.4,
+    "round6": 1.1,
+    "round7": 294,
+    "round8": 223,
+    "round9": 335,
+    "round10": 235360
+  },
+  {
+    "name": "Sydney McDonald",
+    "email": "sydneymcdonald22@gmail.com",
+    "tribe": "I",
+    "eliminated": "",
+    "round5": 8,
+    "round6": 6.2,
+    "round7": 616,
+    "round8": 120,
+    "round9": 59,
+    "round10": 110510
+  },
+  {
+    "name": "Alek Sayers",
+    "email": "alekzander.sayers@gmail.com",
+    "tribe": "J",
+    "eliminated": 9,
+    "round5": 5.9,
+    "round6": 4.3,
+    "round7": 320,
+    "round8": 113,
+    "round9": 83,
+    "round10": ""
+  },
+  {
+    "name": "Annie Share",
+    "email": "annieshare@aol.com",
+    "tribe": "J",
+    "eliminated": 9,
+    "round5": 4.2,
+    "round6": 1.3,
+    "round7": 144,
+    "round8": 145,
+    "round9": 68,
+    "round10": ""
+  },
+  {
+    "name": "Grace Petr",
+    "email": "grpetr@gmail.com",
+    "tribe": "J",
+    "eliminated": "",
+    "round5": 5,
+    "round6": 0.7,
+    "round7": 213,
+    "round8": 154,
+    "round9": 37,
+    "round10": 233230
+  },
+  {
+    "name": "Jake Kuhn",
+    "email": "jakekuhn17@gmail.com",
+    "tribe": "J",
+    "eliminated": "",
+    "round5": 3,
+    "round6": 4.5,
+    "round7": 225,
+    "round8": 131,
+    "round9": 114,
+    "round10": 202270
+  },
+  {
+    "name": "Katie Semple",
+    "email": "katiessemple@gmail.com",
+    "tribe": "J",
+    "eliminated": "",
+    "round5": 11,
+    "round6": 0.3,
+    "round7": 1034,
+    "round8": 271,
+    "round9": 22,
+    "round10": 764150
+  },
+  {
+    "name": "Kira Gabriel",
+    "email": "kkgabriel16@gmail.com",
+    "tribe": "J",
+    "eliminated": 8,
+    "round5": 7.5,
+    "round6": 3,
+    "round7": 1284,
+    "round8": 180,
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Raj Sanghvi",
+    "email": "sanghvi.raj.j@gmail.com",
+    "tribe": "J",
+    "eliminated": 7,
+    "round5": 2.8,
+    "round6": 2.8,
+    "round7": 3,
+    "round8": "",
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Sean Koch",
+    "email": "seankochcomedy@gmail.com",
+    "tribe": "J",
+    "eliminated": "",
+    "round5": 2.4,
+    "round6": 0,
+    "round7": 770,
+    "round8": 267,
+    "round9": 1388,
+    "round10": 304880
+  },
+  {
+    "name": "Taylor Tolleson",
+    "email": "taylorlainetolleson@gmail.com",
+    "tribe": "J",
+    "eliminated": 5,
+    "round5": 8,
+    "round6": "",
+    "round7": "",
+    "round8": "",
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "Connor Evans*",
+    "email": "cbevans520@gmail.com",
+    "tribe": "K",
+    "eliminated": "",
+    "round5": "",
+    "round6": "",
+    "round7": 2510,
+    "round8": 88,
+    "round9": 193,
+    "round10": ""
+  },
+  {
+    "name": "Danny Mejia*",
+    "email": "dannymejia94@gmail.com",
+    "tribe": "K",
+    "eliminated": "",
+    "round5": "",
+    "round6": "",
+    "round7": 4356,
+    "round8": 95,
+    "round9": 33,
+    "round10": ""
+  },
+  {
+    "name": "Eli Millen",
+    "email": "elijahmillen@gmail.com",
+    "tribe": "K",
+    "eliminated": 8,
+    "round5": "",
+    "round6": "",
+    "round7": "",
+    "round8": 120,
+    "round9": "",
+    "round10": ""
+  },
+  {
+    "name": "James Jelin*",
+    "email": "jameshrjelin@gmail.com",
+    "tribe": "K",
+    "eliminated": "",
+    "round5": "",
+    "round6": "",
+    "round7": 1566,
+    "round8": 190,
+    "round9": 45,
+    "round10": 580450
+  },
+  {
+    "name": "Julian Andrews*",
+    "email": "julian.w.andrews@gmail.com",
+    "tribe": "K",
+    "eliminated": "",
+    "round5": "",
+    "round6": "",
+    "round7": 2546,
+    "round8": 137,
+    "round9": 149,
+    "round10": 12695740
+  },
+  {
+    "name": "Juliet Eyraud*",
+    "email": "juliet.eyraud@gmail.com",
+    "tribe": "K",
+    "eliminated": "",
+    "round5": "",
+    "round6": "",
+    "round7": 1824,
+    "round8": 362,
+    "round9": 16,
+    "round10": 183790
+  },
+  {
+    "name": "Lee Raymond Melbourne Weaver*",
+    "email": "leeraymelwea@gmail.com",
+    "tribe": "K",
+    "eliminated": 9,
+    "round5": "",
+    "round6": "",
+    "round7": 1621,
+    "round8": 150,
+    "round9": 96,
+    "round10": ""
+  },
+  {
+    "name": "Taylor Tolleson*",
+    "email": "taylorlainetolleson@gmail.com",
+    "tribe": "K",
+    "eliminated": "",
+    "round5": "",
+    "round6": "",
+    "round7": 1913,
+    "round8": 121,
+    "round9": 319,
+    "round10": 153360
   }
 ]
