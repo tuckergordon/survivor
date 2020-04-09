@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TribeTotal } from '../shared/models/survivor.model';
+import { TribeRound } from '../shared/models/survivor.model';
 
 @Component({
   selector: 'app-total-card',
@@ -8,7 +8,7 @@ import { TribeTotal } from '../shared/models/survivor.model';
 })
 export class TotalCardComponent implements OnInit {
 
-  @Input() tribeTotal: TribeTotal;
+  @Input() tribeRound: TribeRound;
   @Input() round?: number;
 
   constructor() { }

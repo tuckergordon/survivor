@@ -1,29 +1,28 @@
 <mat-card class="result-row">
-  <!-- <ng-container *ngFor="let tribe of totals; let i = index"> -->
   <table class="result-layout-table">
     <tr>
       <td>
         <mat-card-header>
-          <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + totals[0].id + '.png'"
-            [style.border-color]="totals[0].color">
-          <mat-card-title>{{totals[0].name}}</mat-card-title>
+          <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + tribeRounds[0].tribe.id + '.png'"
+            [style.border-color]="tribeRounds[0].tribe.color">
+          <mat-card-title>{{tribeRounds[0].tribe.name}}</mat-card-title>
         </mat-card-header>
       </td>
       <td class="scores">
-        <div class="score" [class.score--winner]="winnerIndex === 0" [style.background-color]="winnerIndex === 0 ? totals[0].color : null">{{ getResult(totals[0].total) }}</div> - 
-        <div class="score" [class.score--winner]="winnerIndex === 1" [style.background-color]="winnerIndex === 1 ? totals[1].color : null">{{ getResult(totals[1].total) }}</div>
+        <div class="score" [class.score--winner]="winnerIndex === 0" [style.background-color]="winnerIndex === 0 ? tribeRounds[0].tribe.color : null">{{ getResult(tribeRounds[0].score) }}</div> - 
+        <div class="score" [class.score--winner]="winnerIndex === 1" [style.background-color]="winnerIndex === 1 ? tribeRounds[1].tribe.color : null">{{ getResult(tribeRounds[1].score) }}</div>
       </td>
       <td>
         <mat-card-header style="flex-flow: row-reverse;">
-          <mat-card-title>{{totals[1].name}}</mat-card-title>
-          <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + totals[1].id + '.png'"
-            [style.border-color]="totals[1].color">
+          <mat-card-title>{{tribeRounds[1].tribe.name}}</mat-card-title>
+          <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + tribeRounds[1].tribe.id + '.png'"
+            [style.border-color]="tribeRounds[1].tribe.color">
         </mat-card-header>
       </td>
     </tr>
     <tr>
-      <td>
-        <table class="result-table" mat-table [dataSource]="sortTotal(totals[0]).players">
+      <td style="vertical-align: top;">
+        <table class="result-table" mat-table [dataSource]="tribeRounds[0].players">
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -32,22 +31,22 @@
           <!-- Result Column -->
           <ng-container matColumnDef="result">
             <th mat-header-cell *matHeaderCellDef style="text-align: right;"> {{ resultUnit }} </th>
-            <td mat-cell *matCellDef="let element" style="text-align: right;"> {{ getResult(element['round' + round]) }} </td>
+            <td mat-cell *matCellDef="let element" style="text-align: right;"> {{ getResult(getPlayerScore(element)) }} </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
       </td>
       <td style="height: 100%;">
-        <app-win-loss-chart class="chart" [totals]="totals" [round]="round" [resultUnit]="resultUnit"
+        <app-win-loss-chart class="chart" [tribeRounds]="tribeRounds" [round]="round" [resultUnit]="resultUnit"
           [sortDirection]="sortDirection" [max]="max"></app-win-loss-chart>
       </td>
-      <td>
-        <table class="result-table" mat-table [dataSource]="sortTotal(totals[1]).players">
+      <td style="vertical-align: top;">
+        <table class="result-table" mat-table [dataSource]="tribeRounds[1].players">
           <!-- Result Column -->
           <ng-container matColumnDef="result">
             <th mat-header-cell *matHeaderCellDef> {{ resultUnit }} </th>
-            <td mat-cell *matCellDef="let element"> {{ getResult(element['round' + round]) }} </td>
+            <td mat-cell *matCellDef="let element"> {{ getResult(getPlayerScore(element)) }} </td>
           </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="name">

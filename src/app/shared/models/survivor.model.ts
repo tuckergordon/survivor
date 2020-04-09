@@ -50,3 +50,7 @@ export interface Round {
   tribe: Tribe;
   score: number;
 }
+
+export interface TribeRound extends Round {
+  players: Player[];
+}

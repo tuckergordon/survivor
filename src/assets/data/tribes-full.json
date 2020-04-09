@@ -1,6 +1,6 @@
 [
   {
-    "id": "A",
+    "id": "C",
     "name": "Damn Liar",
     "color": "#ffca28",
     "councils": 1,
@@ -16,7 +16,7 @@
     "lastRound": 4
   },
   {
-    "id": "C",
+    "id": "E",
     "name": "The Fermentalists",
     "color": "#01579b",
     "councils": 0,
@@ -24,7 +24,7 @@
     "lastRound": 4
   },
   {
-    "id": "D",
+    "id": "F",
     "name": "Hermits & Harlots",
     "color": "#4a148c",
     "councils": 2,
@@ -32,7 +32,7 @@
     "lastRound": 4
   },
   {
-    "id": "E",
+    "id": "A",
     "name": "Push Up Contest",
     "color": "#b71c1c",
     "councils": 0,
@@ -40,7 +40,7 @@
     "lastRound": 4
   },
   {
-    "id": "F",
+    "id": "D",
     "name": "Teem Feet",
     "color": "#ff6f00",
     "councils": 2,
