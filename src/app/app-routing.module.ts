@@ -11,6 +11,7 @@ import { RoundSevenComponent } from './results/round-seven/round-seven.component
 import { RoundEightComponent } from './results/round-eight/round-eight.component';
 import { RoundNineComponent } from './results/round-nine/round-nine.component';
 import { RoundTenComponent } from './results/round-ten/round-ten.component';
+import { RoundElevenComponent } from './results/round-eleven/round-eleven.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
       {
         path: '10',
         component: RoundTenComponent,
+      },
+      {
+        path: '11',
+        component: RoundElevenComponent,
       },
     ]
   },
