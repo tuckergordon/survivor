@@ -26,7 +26,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
     top: 5,
     bottom: 5,
     left: 30,
-    right: 55
+    right: 75
   };
 
   chartWidth: number;
