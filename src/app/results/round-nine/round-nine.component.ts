@@ -22,7 +22,7 @@ export class RoundNineComponent implements OnInit {
     this.players$ = this.dataService.getPlayers({ round: this.ROUND });
     this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);  // TODO: implement eliminated in refactor
   }
-  
+
   getPlayerTribe(player: Player): Tribe {
     return DataService.getPlayerTribe(player, this.ROUND);
   }
