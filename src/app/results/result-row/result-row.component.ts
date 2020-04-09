@@ -50,7 +50,7 @@ export class ResultRowComponent implements OnInit {
     if (this.resultUnit === 'Time') {
       return this.minuteSecondsPipe.transform(result);
     } else if (this.resultUnit === 'Pct') {
-      return result + '%';
+      return ('' + result).slice(0, 4) + '%';
     }
     return result;
   }
