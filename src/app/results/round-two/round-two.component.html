@@ -26,8 +26,8 @@
       <div class="eliminated-players">
         <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
           <div class="tribe-icon" mat-card-avatar
-            [style.background-image]="'url(assets/images/tribe-icons/' + player.tribe.id + '.png)'"
-            [style.color]="player.tribe.color">
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
           </div>
           <span class="eliminated-player__name">{{ player.name }}</span>
         </div>
@@ -35,5 +35,5 @@
     </mat-card-content>
   </mat-card>
 </div>
-<app-result-row *ngFor="let row of (resultRows$ | async)" [totals]="row" [round]="2" [max]="max$ | async"
+<app-result-row *ngFor="let row of (resultRows$ | async)" [tribeRounds]="row" [round]="ROUND" [max]="max$ | async"
   resultUnit="Time" sortDirection="asc"></app-result-row>

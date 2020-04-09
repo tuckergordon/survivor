@@ -45,7 +45,7 @@ export class RoundThreeComponent implements OnInit {
       }
       return rows;
     }));
-    this.eliminated$ = this.dataService.getRoundEliminated(4);
+    this.eliminated$ = this.dataService.getRoundEliminated(this.ROUND);
     this.max$ = players$.pipe(
       map(players => {
         let max = 0;
