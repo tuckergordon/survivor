@@ -1,0 +1,106 @@
+[
+  {
+    "id": "C",
+    "name": "Damn Liar",
+    "color": "#ffca28",
+    "councils": 1,
+    "firstRound": 1,
+    "lastRound": 4
+  },
+  {
+    "id": "B",
+    "name": "Team B",
+    "color": "#33691e",
+    "councils": 1,
+    "firstRound": 1,
+    "lastRound": 4
+  },
+  {
+    "id": "E",
+    "name": "The Fermentalists",
+    "color": "#01579b",
+    "councils": 0,
+    "firstRound": 1,
+    "lastRound": 4
+  },
+  {
+    "id": "F",
+    "name": "Hermits & Harlots",
+    "color": "#4a148c",
+    "councils": 2,
+    "firstRound": 1,
+    "lastRound": 4
+  },
+  {
+    "id": "A",
+    "name": "Push Up Contest",
+    "color": "#b71c1c",
+    "councils": 0,
+    "firstRound": 1,
+    "lastRound": 4
+  },
+  {
+    "id": "D",
+    "name": "Teem Feet",
+    "color": "#ff6f00",
+    "councils": 2,
+    "firstRound": 1,
+    "lastRound": 4
+  },
+  {
+    "id": "G",
+    "name": "Team 1",
+    "color": "#01579b",
+    "councils": 1,
+    "firstRound": 5,
+    "lastRound": 10
+  },
+  {
+    "id": "H",
+    "name": "Team 2",
+    "color": "#b71c1c",
+    "councils": 3,
+    "firstRound": 5,
+    "lastRound": 10
+  },
+  {
+    "id": "I",
+    "name": "Team 3",
+    "color": "#ff6f00",
+    "councils": 3,
+    "firstRound": 5,
+    "lastRound": 10
+  },
+  {
+    "id": "J",
+    "name": "Team 4",
+    "color": "#4a148c",
+    "councils": 3,
+    "firstRound": 5,
+    "lastRound": 10
+  },
+  {
+    "id": "K",
+    "name": "The Castaways",
+    "color": "#9e9e9e",
+    "councils": 2,
+    "firstRound": 7,
+    "lastRound": 10
+  },
+  {
+    "id": "L",
+    "name": "Team A",
+    "color": "#b71c1c",
+    "councils": 1,
+    "firstRound": 11,
+    "lastRound": ""
+  },
+  {
+    "id": "M",
+    "name": "Team B",
+    "color": "#01579b",
+    "councils": "",
+    "firstRound": 11,
+    "lastRound": ""
+  }
+]
