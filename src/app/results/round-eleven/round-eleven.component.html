@@ -40,12 +40,12 @@
         <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
           [style.border-color]="score.tribe.color">
         <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
-        <mat-card-subtitle>Avg: {{ score.score | minuteSeconds }}</mat-card-subtitle>
+        <mat-card-subtitle>Avg: {{ ('' + score.score).slice(0, 8) }}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>
   <mat-card class="chart-card">
     <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
-      resultUnit="m:s"></app-score-bar-chart>
+      resultUnit="s"></app-score-bar-chart>
   </mat-card>
 </div>
