@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../shared/models/survivor.model';
 import { DataService } from '../shared/services/data.service';
-import { Observable } from 'rxjs';
+import { Observable, combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Tribe } from '../shared/models/survivor.model';
 
 @Component({
   selector: 'app-roster',
@@ -12,10 +13,35 @@ export class RosterComponent implements OnInit {
 
   tribes$: Observable<any[]>;
 
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    // this.tribes$ = this.dataService.getPlayersByTribe();
+    const tribes$ = this.dataService.getTribes();
+    const players$ = this.dataService.getPlayers(null);
+
+    this.tribes$ = combineLatest([tribes$, players$]).pipe(map(([tribes, players]) => {
+      return tribes.map(tribe => {
+        const tribePlayers = players.filter(player => {
+          const playerTribe = DataService.getPlayerTribe(player, tribe.firstRound);
+          return playerTribe && playerTribe.id === tribe.id;
+        });
+        return {
+          ...tribe,
+          players: tribePlayers
+        };
+      }).sort((a, b) => {
+        if (!a.lastRound && b.lastRound) return -1;
+        if (!b.lastRound && a.lastRound) return 1;
+        if (!a.lastRound && !b.lastRound) return a.id.localeCompare(b.id);
+
+        return a.lastRound - b.lastRound;
+      });
+    }));
+  }
+
+  isOld(tribe: Tribe) {
+    return tribe.lastRound && tribe.lastRound < 11;
   }
 
 }

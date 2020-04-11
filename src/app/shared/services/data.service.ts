@@ -6,7 +6,7 @@ import { Player, PlayerDataModel, Tribe, Round } from '../models/survivor.model'
 
 export interface GetPlayerOptions {
   tribeId?: string;
-  round: number;  // 1 = round 1
+  round?: number;  // 1 = round 1
 }
 
 export enum AggregateBy {
@@ -55,6 +55,8 @@ export class DataService {
         shareReplay(1)
       );
     }
+    if (!options) return this.players$;
+
     return this.players$.pipe(map(players => {
       return players.filter(player => {
         let filter = true;
