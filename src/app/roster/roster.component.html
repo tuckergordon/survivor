@@ -8,10 +8,10 @@
   <mat-card-content>
     <ul>
       <li *ngFor="let player of tribe.players">
-        <span *ngIf="!player.eliminated; else eliminated">{{player.name}}</span>
+        <span *ngIf="!isPlayerEliminated(player); else eliminated">{{player.name}}</span>
         <ng-template #eliminated>
           <span class="player-name player-name--eliminated">{{player.name}}</span>
-          <span class="eliminated-message">&nbsp;(round {{player.eliminated}})</span>
+          <span class="eliminated-message">&nbsp;(round {{player.secondElim || player.firstElim}})</span>
         </ng-template>
         <a [href]="'mailto:' + player.email">
           <mat-icon class="player-email">email</mat-icon>

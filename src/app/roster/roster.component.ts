@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/services/data.service';
 import { Observable, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Tribe } from '../shared/models/survivor.model';
+import { Tribe, Player } from '../shared/models/survivor.model';
 
 @Component({
   selector: 'app-roster',
@@ -13,6 +13,7 @@ export class RosterComponent implements OnInit {
 
   tribes$: Observable<any[]>;
 
+  ROUND = 11;
 
   constructor(private dataService: DataService) { }
 
@@ -41,7 +42,17 @@ export class RosterComponent implements OnInit {
   }
 
   isOld(tribe: Tribe) {
-    return tribe.lastRound && tribe.lastRound < 11;
+    return tribe.lastRound && tribe.lastRound < this.ROUND;
+  }
+
+  isPlayerEliminated(player: Player) {
+    if (player.secondElim) return true;
+    if (player.firstElim) {
+      const playerScore = DataService.getPlayerScore(player, this.ROUND);
+      if (player.firstElim === this.ROUND) return true;
+      if (!playerScore && playerScore !== 0) return true;
+    }
+    return false;
   }
 
 }
