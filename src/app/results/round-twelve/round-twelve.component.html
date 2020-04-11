@@ -1,0 +1,55 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Sporcle Typing</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">We're back to Sporcle. You have ONE (1) CHANCE TO DO THIS CHALLENGE. It is a one
+        minute long typing quiz. There are 52 words you must spell correctly. When you begin, one word will appear. Once
+        you spell it correctly, the next word will show up. When you load the page, make sure you get rid of any ads
+        that might get in your way. I know sometimes when I use Sporcle (VERY RARELY), ads will appear during my quiz
+        and will throw me off. Since this is time dependent, I wouldn't want that to mess anyone up. AGAIN, YOU HAVE ONE
+        CHANCE TO DO THIS. Send me results by Saturday morning at 8 AM, and we will do Tribal again later that day.
+        <br><br>Thank you for reading.
+
+        <br><br>Here's the quiz:
+
+        <br><br><a
+          href="https://www.sporcle.com/games/HenryFieldstone/typingchallenge">https://www.sporcle.com/games/HenryFieldstone/typingchallenge</a>
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let score of (tribeScores$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
+          [style.border-color]="score.tribe.color">
+        <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ ('' + score.score).slice(0, 8) }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="s"></app-score-bar-chart>
+  </mat-card>
+</div>
