@@ -1,0 +1,52 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Name That Song</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">Another Sporcle quiz. Real original, Andrew. I know. This one is different, though.
+        It's a music recognition quiz. There's a Youtube video on the top of the quiz with four second clips of 100
+        songs. The video is 8 and a half minutes. Your goal is to recognize as many songs (by title) as possible. You
+        recognize it? Type it in. The quiz is 20 minutes long and you only get one chance to do it because the answers
+        show up when the time runs out. You may watch the video (aka listen to the song clips) before you start the
+        quiz. You may also write down anything you recognize before you start the quiz. Other than a pen and paper (not
+        required), there will be NO outside sources.
+        <br><br><a
+          href="https://www.sporcle.com/games/badger_03/name_that_song">https://www.sporcle.com/games/badger_03/name_that_song</a>
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let score of (tribeScores$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
+          [style.border-color]="score.tribe.color">
+        <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ ('' + score.score).slice(0, 8) }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="s"></app-score-bar-chart>
+  </mat-card>
+</div>

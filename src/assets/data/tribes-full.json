@@ -91,7 +91,7 @@
     "id": "L",
     "name": "Team A",
     "color": "#b71c1c",
-    "councils": 1,
+    "councils": 2,
     "firstRound": 11,
     "lastRound": ""
   },
@@ -99,7 +99,7 @@
     "id": "M",
     "name": "Team B",
     "color": "#01579b",
-    "councils": "",
+    "councils": 1,
     "firstRound": 11,
     "lastRound": ""
   }
