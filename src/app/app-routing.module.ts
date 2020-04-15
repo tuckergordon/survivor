@@ -14,6 +14,7 @@ import { RoundTenComponent } from './results/round-ten/round-ten.component';
 import { RoundElevenComponent } from './results/round-eleven/round-eleven.component';
 import { RoundTwelveComponent } from './results/round-twelve/round-twelve.component';
 import { RoundThirteenComponent } from './results/round-thirteen/round-thirteen.component';
+import { RoundFourteenComponent } from './results/round-fourteen/round-fourteen.component';
 
 const routes: Routes = [
   {
@@ -74,6 +75,10 @@ const routes: Routes = [
       {
         path: '13',
         component: RoundThirteenComponent,
+      },
+      {
+        path: '14',
+        component: RoundFourteenComponent,
       },
     ]
   },
