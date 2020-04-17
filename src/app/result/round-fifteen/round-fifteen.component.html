@@ -1,0 +1,55 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Escape The Boat House</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">You will follow the link below to an online escape room. You must escape from the
+        boathouse. The game does not automatically time you, so open a new tab and as soon as you click "Play," start
+        the timer. There is a series of mini games/riddles/puzzles that you must complete. Do not look up clues. Do not
+        use the explainer video at the bottom of the game. If you need a hint, text me and I will give you a hint. Every
+        hint that you request will add 5 minutes to your time. You only get one chance to complete this game. Here is
+        the link.
+        <br><br>
+        <a href="https://www.365escape.com/Boat-House.html">https://www.365escape.com/Boat-House.html</a>
+        <br><br>
+        The games involve finding things on the screen, answering riddles/questions, and finding patterns. Beyond that,
+        I'm being purposefully vague because I don't want to give too much away. If you have questions, ask me before
+        you click "Play," so that you don't do something wrong.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let score of (tribeScores$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
+          [style.border-color]="score.tribe.color">
+        <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ score.score | minuteSeconds }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="ASC"
+      resultUnit="m:s"></app-score-bar-chart>
+  </mat-card>
+</div>
