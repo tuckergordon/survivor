@@ -36,6 +36,7 @@ import { RoundThirteenComponent } from './results/round-thirteen/round-thirteen.
 import { RoundFourteenComponent } from './results/round-fourteen/round-fourteen.component';
 import { RoundFifteenComponent } from './result/round-fifteen/round-fifteen.component';
 import { RoundSixteenComponent } from './results/round-sixteen/round-sixteen.component';
+import { RoundSeventeenComponent } from './results/round-seventeen/round-seventeen.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { RoundSixteenComponent } from './results/round-sixteen/round-sixteen.com
     RoundThirteenComponent,
     RoundFourteenComponent,
     RoundFifteenComponent,
-    RoundSixteenComponent
+    RoundSixteenComponent,
+    RoundSeventeenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Broom Balance</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">In this challenge, you must balance on your chin. Send me your best score by 8 AM on
+        Tuesday, April 21st, 2020. I feel like it's kind of hard to cheat on this one, but make sure you don't cheat.
+        Time starts when your hands leave the broom and ends when the broom no longer touches your chin or hits another
+        surface.. You may do this inside or outside. Obviously, everyone's brooms will be a little different, but just
+        make sure it's a standard broom, similar to <a
+          href="https://www.uline.com/Product/Detail/H-3976BLU/Brooms-and-Brushes/Colored-Angle-Broom-12-Blue?pricode=WA9562&gadtype=pla&id=H-3976BLU&gclid=CjwKCAjw7e_0BRB7EiwAlH-goLROGXA9kdgs1pj6HKy1iegKQ_oJYlixKwgPRrhi2wvI7z_fBuScLhoCY1AQAvD_BwE&gclsrc=aw.ds">this</a>.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let score of (tribeScores$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
+          [style.border-color]="score.tribe.color">
+        <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ score.score | minuteSeconds }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="DESC"
+      resultUnit="m:s"></app-score-bar-chart>
+  </mat-card>
+</div>
