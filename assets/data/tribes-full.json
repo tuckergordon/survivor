@@ -93,7 +93,7 @@
     "color": "#b71c1c",
     "councils": 4,
     "firstRound": 11,
-    "lastRound": ""
+    "lastRound": 16
   },
   {
     "id": "M",
@@ -101,6 +101,30 @@
     "color": "#01579b",
     "councils": 2,
     "firstRound": 11,
+    "lastRound": 16
+  },
+  {
+    "id": "N",
+    "name": "Team Our Scars Remind Us That The Past Is Real",
+    "color": "#01579b",
+    "councils": 1,
+    "firstRound": 17,
+    "lastRound": ""
+  },
+  {
+    "id": "O",
+    "name": "Team 2",
+    "color": "#b71c1c",
+    "councils": 1,
+    "firstRound": 17,
+    "lastRound": ""
+  },
+  {
+    "id": "P",
+    "name": "Team 3",
+    "color": "#ffca28",
+    "councils": 0,
+    "firstRound": 17,
     "lastRound": ""
   }
 ]
