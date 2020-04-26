@@ -1,0 +1,16 @@
+<!-- <svg #chart class="chart-svg"></svg> -->
+<div *ngFor="let player of players; let i = index" class="player">
+  <div>
+
+    <h3 class="player__name">
+      <!-- <img class="tribe-icon player__icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png'"
+        [style.border-color]="getPlayerTribe(player).color"> {{ player.name }} -->
+      <div class="player__icon" [style.background]="getPlayerTribe(player).color"></div> {{ player.name }}
+    </h3>
+  </div>
+  <ol>
+    <li *ngFor="let node of getPlayerPath(player); let j = index" class="node">
+      {{ node }}
+    </li>
+  </ol>
+</div>

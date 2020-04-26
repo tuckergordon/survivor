@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.player {
+  margin: 4px;
+  width: 160px;
+
+  &__name {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  &__icon {
+    height: 12px;
+    width: 12px;
+    border-width: 2px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+}
+
+ol {
+  padding-left: 18px;
+}
+
+.node {
+  // margin: 8px;
+  padding: 4px;
+}

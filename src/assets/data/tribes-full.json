@@ -105,7 +105,7 @@
   },
   {
     "id": "N",
-    "name": "Team Our Scars Remind Us That The Past Is Real",
+    "name": "T3am Our Scars R3mind Us That Th3 Past is R3al",
     "color": "#01579b",
     "councils": 1,
     "firstRound": 17,
@@ -115,15 +115,15 @@
     "id": "O",
     "name": "Team 2",
     "color": "#b71c1c",
-    "councils": 1,
+    "councils": 2,
     "firstRound": 17,
     "lastRound": ""
   },
   {
     "id": "P",
-    "name": "Team 3",
+    "name": "T3am 3dibl3s",
     "color": "#ffca28",
-    "councils": 0,
+    "councils": 1,
     "firstRound": 17,
     "lastRound": ""
   }
