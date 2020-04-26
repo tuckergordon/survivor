@@ -1,0 +1,40 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Fishy</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">Get the highest score in the game of Fishy, linked below. Screenshot and send me your
+        score. You may try as many times as you like. In the game, you are a fish who eats smaller fish, by touching
+        them, while avoiding larger fish. If you touch a larger fish, you die and the game ends. If you eat a smaller
+        fish, your score goes up and you increase in size, thus increasing the range of fish you can eat.
+        <br><br>
+        Here’s the link:
+        <a href="https://www.addictinggames.com/action/fishy">https://www.addictinggames.com/action/fishy</a>
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<iframe width="800" height="600" src="https://www.addictinggames.com/embed/flash-games/16884" scrolling="no"></iframe>
+
+<!-- <mat-card class="chart-card">
+  <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+    resultUnit="s"></app-score-bar-chart>
+</mat-card> -->

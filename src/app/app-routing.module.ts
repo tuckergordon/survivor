@@ -20,6 +20,7 @@ import { RoundSixteenComponent } from './results/round-sixteen/round-sixteen.com
 import { RoundSeventeenComponent } from './results/round-seventeen/round-seventeen.component';
 import { RoundEighteenComponent } from './results/round-eighteen/round-eighteen.component';
 import { RoundNineteenComponent } from './results/round-nineteen/round-nineteen.component';
+import { RoundTwentyComponent } from './results/round-twenty/round-twenty.component';
 
 const routes: Routes = [
   {
@@ -104,6 +105,10 @@ const routes: Routes = [
       {
         path: '19',
         component: RoundNineteenComponent,
+      },
+      {
+        path: '20',
+        component: RoundTwentyComponent,
       },
     ]
   },

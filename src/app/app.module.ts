@@ -40,6 +40,7 @@ import { RoundSeventeenComponent } from './results/round-seventeen/round-sevente
 import { RoundEighteenComponent } from './results/round-eighteen/round-eighteen.component';
 import { WikiPathsComponent } from './wiki-paths/wiki-paths.component';
 import { RoundNineteenComponent } from './results/round-nineteen/round-nineteen.component';
+import { RoundTwentyComponent } from './results/round-twenty/round-twenty.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { RoundNineteenComponent } from './results/round-nineteen/round-nineteen.
     RoundSeventeenComponent,
     RoundEighteenComponent,
     WikiPathsComponent,
-    RoundNineteenComponent
+    RoundNineteenComponent,
+    RoundTwentyComponent
   ],
   imports: [
     BrowserModule,
