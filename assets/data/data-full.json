@@ -39,7 +39,7 @@
     "round17Score": 16,
     "round17Tribe": "N",
     "round18Score": 3,
-    "round18Answer": "wii,europe,italy,vivaldi",
+    "round18Answer": "Wii,Europe,Italy,Vivaldi",
     "round18Tribe": "N"
   },
   {
@@ -82,7 +82,7 @@
     "round17Score": 28,
     "round17Tribe": "N",
     "round18Score": 3,
-    "round18Answer": "wii,europe,italy,vivaldi",
+    "round18Answer": "Wii,Europe,Italy,Vivaldi",
     "round18Tribe": "N"
   },
   {
@@ -124,8 +124,8 @@
     "round16Tribe": "M",
     "round17Score": 4,
     "round17Tribe": "N",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Italy,Vivaldi",
     "round18Tribe": "N"
   },
   {
@@ -168,7 +168,7 @@
     "round17Score": 18,
     "round17Tribe": "N",
     "round18Score": 3,
-    "round18Answer": "wii,europe,italy,vivaldi",
+    "round18Answer": "Wii,Europe,Italy,Vivaldi",
     "round18Tribe": "N"
   },
   {
@@ -211,7 +211,7 @@
     "round17Score": 9,
     "round17Tribe": "N",
     "round18Score": 3,
-    "round18Answer": "wii,cd,classical music,vivaldi",
+    "round18Answer": "Wii,CD,Classical Music,Vivaldi",
     "round18Tribe": "N"
   },
   {
@@ -253,8 +253,8 @@
     "round16Tribe": "L",
     "round17Score": 5,
     "round17Tribe": "O",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Venice,Vivaldi",
     "round18Tribe": "O"
   },
   {
@@ -296,8 +296,8 @@
     "round16Tribe": "M",
     "round17Score": 3,
     "round17Tribe": "O",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Venice,Vivaldi",
     "round18Tribe": "O"
   },
   {
@@ -339,8 +339,8 @@
     "round16Tribe": "M",
     "round17Score": 11.1,
     "round17Tribe": "O",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Italy,Vivaldi",
     "round18Tribe": "O"
   },
   {
@@ -382,14 +382,14 @@
     "round16Tribe": "M",
     "round17Score": 6,
     "round17Tribe": "O",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Venice,Vivaldi",
     "round18Tribe": "O"
   },
   {
     "name": "Sydney McDonald",
     "firstElim": "",
-    "secondElim": "",
+    "secondElim": 18,
     "email": "sydneymcdonald22@gmail.com",
     "round1Score": 39,
     "round1Tribe": "B",
@@ -425,8 +425,8 @@
     "round16Tribe": "M",
     "round17Score": 2,
     "round17Tribe": "O",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 8,
+    "round18Answer": "Wii,US$,Turks and Caicos,United Kingdom,WWI,Kingdom of Lombard-Venetia,Republic of Venice,Vivaldi",
     "round18Tribe": "O"
   },
   {
@@ -468,8 +468,8 @@
     "round16Tribe": "L",
     "round17Score": 180,
     "round17Tribe": "P",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 4,
+    "round18Answer": "Wii,Europe,Age of Enlightenment,Sebastian Bach,Vivaldi",
     "round18Tribe": "P"
   },
   {
@@ -511,8 +511,8 @@
     "round16Tribe": "L",
     "round17Score": 16,
     "round17Tribe": "P",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe, Music, Viv",
     "round18Tribe": "P"
   },
   {
@@ -554,14 +554,14 @@
     "round16Tribe": "L",
     "round17Score": 158,
     "round17Tribe": "P",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 7,
+    "round18Answer": "Wii,Queen Elizabeth II, Pope, Catholic Church, Enlightenment, Classical Music, Baroque, Vivaldi",
     "round18Tribe": "P"
   },
   {
     "name": "James Jelin",
     "firstElim": 2,
-    "secondElim": "",
+    "secondElim": 18,
     "email": "jameshrjelin@gmail.com",
     "round1Score": 92,
     "round1Tribe": "F",
@@ -597,8 +597,8 @@
     "round16Tribe": "L",
     "round17Score": 48,
     "round17Tribe": "P",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Italy,Vivaldi",
     "round18Tribe": "P"
   },
   {
@@ -640,8 +640,8 @@
     "round16Tribe": "M",
     "round17Score": 4,
     "round17Tribe": "P",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Super Mario Galaxy,Orchestra,Vivaldi",
     "round18Tribe": "P"
   },
   {
@@ -683,8 +683,8 @@
     "round16Tribe": "M",
     "round17Score": 3.5,
     "round17Tribe": "P",
-    "round18Score": "",
-    "round18Answer": "",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe,Venice,Vivaldi",
     "round18Tribe": "P"
   },
   {
