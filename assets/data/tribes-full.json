@@ -109,7 +109,7 @@
     "color": "#01579b",
     "councils": 1,
     "firstRound": 17,
-    "lastRound": ""
+    "lastRound": 19
   },
   {
     "id": "O",
@@ -126,5 +126,13 @@
     "councils": 2,
     "firstRound": 17,
     "lastRound": 19
+  },
+  {
+    "id": "Q",
+    "name": "Finalists",
+    "color": "#01579b",
+    "councils": "",
+    "firstRound": 20,
+    "lastRound": ""
   }
 ]
