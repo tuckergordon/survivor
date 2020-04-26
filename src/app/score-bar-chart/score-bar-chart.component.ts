@@ -68,7 +68,7 @@ export class ScoreBarChartComponent implements OnInit, AfterViewInit {
       .range([0, this.chartWidth]);
 
     this.scaleY = d3.scaleBand<string>()
-      .paddingInner(0.1)
+      .paddingInner(0.2)
       .domain(this.players.map(player => player.name))
       .range([this.MARGINS.top, this.MARGINS.top + this.chartHeight]);
 

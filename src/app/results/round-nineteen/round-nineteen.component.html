@@ -1,0 +1,54 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Pen(cil) Bounce</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">Your challenge is to bounce a pen or pencil (of any kind whatsoever!!) into a
+        glass/cup (of any kind whatsoever!!) as many times as possible in TWO MINUTES. Everyone gets two minutes. You
+        can use any materials you want, including more than one writing utensil and more than one cup. You can practice
+        as much as you want. The only strict rule outside of it being two minutes is that you must throw/bounce your
+        writing utensil at the surface that your glass/cup is on so that it hits the surface before bouncing into the
+        cup.
+        <br><br>
+        This challenge is taken from Minute To Win It which I have been absolutely crushing. I wouldn't really suggest
+        watching it, but here's a video of the challenge that I'm taking from.
+        <br><br>
+        <a href="https://www.youtube.com/watch?v=f4hK6IhCwMY">https://www.youtube.com/watch?v=f4hK6IhCwMY</a>
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar
+            [style.background-image]="'url(assets/images/tribe-icons/' + getPlayerTribe(player).id + '.png)'"
+            [style.color]="getPlayerTribe(player).color">
+          </div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex; margin-bottom: 30px;">
+  <div class="result-cards">
+    <mat-card *ngFor="let score of (tribeScores$ | async); let i = index" class="result-card">
+      <mat-card-header>
+        <img class="tribe-icon" mat-card-avatar [src]="'assets/images/tribe-icons/' + score.tribe.id + '.png'"
+          [style.border-color]="score.tribe.color">
+        <mat-card-title>{{ i + 1 }}. {{ score.tribe.name }}</mat-card-title>
+        <mat-card-subtitle>Avg: {{ ('' + score.score).slice(0, 8) }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="s"></app-score-bar-chart>
+  </mat-card>
+</div>

@@ -115,16 +115,16 @@
     "id": "O",
     "name": "Team 2",
     "color": "#b71c1c",
-    "councils": 2,
+    "councils": 3,
     "firstRound": 17,
-    "lastRound": ""
+    "lastRound": 19
   },
   {
     "id": "P",
     "name": "T3am 3dibl3s",
     "color": "#ffca28",
-    "councils": 1,
+    "councils": 2,
     "firstRound": 17,
-    "lastRound": ""
+    "lastRound": 19
   }
 ]
