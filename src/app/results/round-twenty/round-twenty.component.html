@@ -11,6 +11,14 @@
         <br><br>
         Here’s the link:
         <a href="https://www.addictinggames.com/action/fishy">https://www.addictinggames.com/action/fishy</a>
+        <br><br>
+        For the seven people who did beat the game, an additional challenge that will determine who actually wins
+        immunity. In keeping with the spirit of this round, we'll do another flash game. This one is called Endless
+        Roller. You are a bowl and you want to get as far as you can without dropping off of the levels that you are
+        rolling on. To expedite this process, I'm going to give all of you TWO TRIES. Please send me your best score of
+        those two tries. Best score wins immunity. If you have any questions, let me know. Here's the link:
+        <br><br>
+        <a href="https://www.addictinggames.com/action/endless-roller">https://www.addictinggames.com/action/endless-roller</a>
       </p>
     </mat-card-content>
   </mat-card>
@@ -32,9 +40,27 @@
   </mat-card>
 </div>
 
-<iframe width="800" height="600" src="https://www.addictinggames.com/embed/flash-games/16884" scrolling="no"></iframe>
+<mat-card>
+  <table class="result-table" mat-table [dataSource]="players$ | async">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+    </ng-container>
 
-<!-- <mat-card class="chart-card">
-  <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
-    resultUnit="s"></app-score-bar-chart>
-</mat-card> -->
+    <!-- Score Column -->
+    <ng-container matColumnDef="score">
+      <th mat-header-cell *matHeaderCellDef> Fishy Score </th>
+      <td mat-cell *matCellDef="let element"> {{ getPlayerScore(element) }} </td>
+    </ng-container>
+
+    <!-- Tiebreak Column -->
+    <ng-container matColumnDef="tiebreak">
+      <th mat-header-cell *matHeaderCellDef> Endless Roller Score </th>
+      <td mat-cell *matCellDef="let element"> {{ getPlayerTiebreak(element) }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
