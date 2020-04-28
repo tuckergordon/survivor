@@ -45,7 +45,9 @@
     "round19Tribe": "N",
     "round20Score": 4308,
     "round20Tiebreak": "",
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Hannah Rafkin",
@@ -93,7 +95,9 @@
     "round19Tribe": "N",
     "round20Score": 8790,
     "round20Tiebreak": "",
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Jenny Ibsen",
@@ -141,7 +145,9 @@
     "round19Tribe": "O",
     "round20Score": 7992,
     "round20Tiebreak": "",
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Joe Seibert",
@@ -189,7 +195,9 @@
     "round19Tribe": "N",
     "round20Score": "Destroyed the Ecosystem",
     "round20Tiebreak": 6,
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Jono Gruber",
@@ -237,7 +245,9 @@
     "round19Tribe": "O",
     "round20Score": "Destroyed the Ecosystem",
     "round20Tiebreak": 6,
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Julian Andrews",
@@ -285,7 +295,9 @@
     "round19Tribe": "N",
     "round20Score": 7512,
     "round20Tiebreak": "",
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Kenny Shapiro",
@@ -333,7 +345,9 @@
     "round19Tribe": "O",
     "round20Score": "Destroyed the Ecosystem",
     "round20Tiebreak": 4,
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Leo Levine",
@@ -381,7 +395,9 @@
     "round19Tribe": "P",
     "round20Score": "Destroyed the Ecosystem",
     "round20Tiebreak": 7,
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Michael Brackney",
@@ -429,55 +445,9 @@
     "round19Tribe": "P",
     "round20Score": "Destroyed the Ecosystem",
     "round20Tiebreak": 8,
-    "round20Tribe": "Q"
-  },
-  {
-    "name": "Sean Koch",
-    "firstElim": 20,
-    "secondElim": "",
-    "email": "seankochcomedy@gmail.com",
-    "round1Score": 238,
-    "round1Tribe": "E",
-    "round2Score": 13,
-    "round2Tribe": "E",
-    "round3Score": 74,
-    "round3Tribe": "E",
-    "round4Score": 59,
-    "round4Tribe": "E",
-    "round5Score": 2.4,
-    "round5Tribe": "J",
-    "round6Score": 0,
-    "round6Tribe": "J",
-    "round7Score": 770,
-    "round7Tribe": "J",
-    "round8Score": 267,
-    "round8Tribe": "J",
-    "round9Score": 1388,
-    "round9Tribe": "J",
-    "round10Score": 304880,
-    "round10Tribe": "J",
-    "round11Score": 20577,
-    "round11Tribe": "L",
-    "round12Score": 96,
-    "round12Tribe": "L",
-    "round13Score": 32,
-    "round13Tribe": "L",
-    "round14Score": 576,
-    "round14Tribe": "L",
-    "round15Score": 400,
-    "round15Tribe": "L",
-    "round16Score": 88,
-    "round16Tribe": "L",
-    "round17Score": 16,
-    "round17Tribe": "P",
-    "round18Score": 3,
-    "round18Answer": "Wii,Europe, Music, Viv",
-    "round18Tribe": "P",
-    "round19Score": 57,
-    "round19Tribe": "P",
-    "round20Score": "Destroyed the Ecosystem",
-    "round20Tiebreak": 11,
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Sophie de Bruijn",
@@ -525,7 +495,9 @@
     "round19Tribe": "P",
     "round20Score": 282,
     "round20Tiebreak": "",
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
   },
   {
     "name": "Tucker Gordon",
@@ -573,7 +545,59 @@
     "round19Tribe": "N",
     "round20Score": "Destroyed the Ecosystem",
     "round20Tiebreak": 5,
-    "round20Tribe": "Q"
+    "round20Tribe": "Q",
+    "round21Score": 0,
+    "round21Immune": "Q"
+  },
+  {
+    "name": "Sean Koch",
+    "firstElim": 20,
+    "secondElim": "",
+    "email": "seankochcomedy@gmail.com",
+    "round1Score": 238,
+    "round1Tribe": "E",
+    "round2Score": 13,
+    "round2Tribe": "E",
+    "round3Score": 74,
+    "round3Tribe": "E",
+    "round4Score": 59,
+    "round4Tribe": "E",
+    "round5Score": 2.4,
+    "round5Tribe": "J",
+    "round6Score": 0,
+    "round6Tribe": "J",
+    "round7Score": 770,
+    "round7Tribe": "J",
+    "round8Score": 267,
+    "round8Tribe": "J",
+    "round9Score": 1388,
+    "round9Tribe": "J",
+    "round10Score": 304880,
+    "round10Tribe": "J",
+    "round11Score": 20577,
+    "round11Tribe": "L",
+    "round12Score": 96,
+    "round12Tribe": "L",
+    "round13Score": 32,
+    "round13Tribe": "L",
+    "round14Score": 576,
+    "round14Tribe": "L",
+    "round15Score": 400,
+    "round15Tribe": "L",
+    "round16Score": 88,
+    "round16Tribe": "L",
+    "round17Score": 16,
+    "round17Tribe": "P",
+    "round18Score": 3,
+    "round18Answer": "Wii,Europe, Music, Viv",
+    "round18Tribe": "P",
+    "round19Score": 57,
+    "round19Tribe": "P",
+    "round20Score": "Destroyed the Ecosystem",
+    "round20Tiebreak": 11,
+    "round20Tribe": "Q",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Juliet Eyraud",
@@ -621,7 +645,9 @@
     "round19Tribe": "O",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Danny Mejia",
@@ -669,7 +695,9 @@
     "round19Tribe": "P",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Sydney McDonald",
@@ -717,7 +745,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "James Jelin",
@@ -765,7 +795,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Sam Chase",
@@ -813,7 +845,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Taylor Tolleson",
@@ -861,7 +895,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Hannah Leblanc",
@@ -909,7 +945,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Emily Spanbock",
@@ -957,7 +995,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Jake Kuhn",
@@ -1005,7 +1045,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Katie Semple",
@@ -1053,7 +1095,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Ryan Sanderson",
@@ -1101,7 +1145,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Alek Sayers",
@@ -1149,7 +1195,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Brooke Goddard",
@@ -1197,7 +1245,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "K Irving",
@@ -1245,7 +1295,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Tessa Westfall",
@@ -1293,7 +1345,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Alex Burns",
@@ -1341,7 +1395,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Sam Williams",
@@ -1389,7 +1445,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Annie Share",
@@ -1437,7 +1495,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Grace Petr",
@@ -1485,7 +1545,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Lee Raymond Melbourne Weaver",
@@ -1533,7 +1595,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Kira Gabriel",
@@ -1581,7 +1645,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Ethan Chapman",
@@ -1629,7 +1695,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Kalil Simms",
@@ -1677,7 +1745,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Erik Steingas",
@@ -1725,7 +1795,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Ian Weider",
@@ -1773,7 +1845,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Thomas Freeman",
@@ -1821,7 +1895,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Maria Wittenauer",
@@ -1869,7 +1945,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Raj Sanghvi",
@@ -1917,7 +1995,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Dominic Chatot",
@@ -1965,7 +2045,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Cam DeWet",
@@ -2013,7 +2095,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Maddie Bustamante",
@@ -2061,7 +2145,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Eli Millen",
@@ -2109,7 +2195,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Ian McMahan",
@@ -2157,7 +2245,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Elyse Lindahl",
@@ -2205,7 +2295,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Jason Roth",
@@ -2253,7 +2345,9 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   },
   {
     "name": "Jon Plester",
@@ -2301,6 +2395,8 @@
     "round19Tribe": "",
     "round20Score": "",
     "round20Tiebreak": "",
-    "round20Tribe": ""
+    "round20Tribe": "",
+    "round21Score": "",
+    "round21Immune": ""
   }
 ]
