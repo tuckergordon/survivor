@@ -18,10 +18,14 @@ app-result-row {
     margin-left: 20px;
   }
 
+  .tribe-icon {
+    background-image: url("src/assets/images/tribe-icons/Q.png");
+    border-color: #01579b;
+    color: #01579b;
+  }
+
   .chart-card {
     height: 400px;
     flex-grow: 1;
-    margin-left: 20px;
-    margin-bottom: 30px;
   }
 }
