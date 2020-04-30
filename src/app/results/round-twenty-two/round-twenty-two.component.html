@@ -1,0 +1,37 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Coin Spin</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">
+        Spin a coin for as long as you can. This can be any normal coin (preferably a penny, nickel, dime, or quarter)
+        and can be done on any open surface. As soon as you let go of your coin, the time starts. As soon as it comes to
+        rest, your time stops. You may not touch the coin after it starts spinning. You may practice as much as you want.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar></div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-card>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fpmTe3TDdVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</mat-card>
+  <!-- <div style="display: flex; margin-bottom: 30px;">
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="m:s"></app-score-bar-chart>
+  </mat-card>
+</div> -->
