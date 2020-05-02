@@ -1,0 +1,37 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Sock-er</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">
+        Take a balled up pair of socks and keep it in the air as long as possible... WITH YOUR FEET! (AHHHHH) To stray
+        away from timed challenges, the winner of individual immunity will be the person who gets the most kicks on the
+        socks before they hit the ground. As soon as the socks touch another surface, your game is over. They are
+        allowed to touch other parts of your body, other than your hands, but the only hits that count are with your
+        feet. You may try as many times as you want! I think you can pick any socks that you want, but if you've got
+        some really big puppies that are an immense advantage, maybe let me be the judge.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar></div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- <div style="display: flex; margin-bottom: 30px;">
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="s"></app-score-bar-chart>
+  </mat-card>
+</div> -->

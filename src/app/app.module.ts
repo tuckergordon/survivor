@@ -43,6 +43,7 @@ import { RoundNineteenComponent } from './results/round-nineteen/round-nineteen.
 import { RoundTwentyComponent } from './results/round-twenty/round-twenty.component';
 import { RoundTwentyOneComponent } from './results/round-twenty-one/round-twenty-one.component';
 import { RoundTwentyTwoComponent } from './results/round-twenty-two/round-twenty-two.component';
+import { RoundTwentyThreeComponent } from './results/round-twenty-three/round-twenty-three.component';
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import { RoundTwentyTwoComponent } from './results/round-twenty-two/round-twenty
     RoundNineteenComponent,
     RoundTwentyComponent,
     RoundTwentyOneComponent,
-    RoundTwentyTwoComponent
+    RoundTwentyTwoComponent,
+    RoundTwentyThreeComponent
   ],
   imports: [
     BrowserModule,
