@@ -24,6 +24,7 @@ import { RoundTwentyComponent } from './results/round-twenty/round-twenty.compon
 import { RoundTwentyOneComponent } from './results/round-twenty-one/round-twenty-one.component';
 import { RoundTwentyTwoComponent } from './results/round-twenty-two/round-twenty-two.component';
 import { RoundTwentyThreeComponent } from './results/round-twenty-three/round-twenty-three.component';
+import { RoundTwentyFourComponent } from './results/round-twenty-four/round-twenty-four.component';
 
 const routes: Routes = [
   {
@@ -124,6 +125,10 @@ const routes: Routes = [
       {
         path: '23',
         component: RoundTwentyThreeComponent,
+      },
+      {
+        path: '24',
+        component: RoundTwentyFourComponent,
       },
     ]
   },

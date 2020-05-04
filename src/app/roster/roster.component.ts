@@ -13,7 +13,7 @@ export class RosterComponent implements OnInit {
 
   tribes$: Observable<any[]>;
 
-  ROUND = 23;
+  ROUND = 24;
 
   constructor(private dataService: DataService) { }
 
