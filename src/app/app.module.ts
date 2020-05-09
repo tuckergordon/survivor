@@ -46,6 +46,8 @@ import { RoundTwentyTwoComponent } from './results/round-twenty-two/round-twenty
 import { RoundTwentyThreeComponent } from './results/round-twenty-three/round-twenty-three.component';
 import { RoundTwentyFourComponent } from './results/round-twenty-four/round-twenty-four.component';
 import { CupPongBracketComponent } from './results/round-twenty-four/cup-pong-bracket/cup-pong-bracket.component';
+import { RoundTwentyFiveComponent } from './results/round-twenty-five/round-twenty-five.component';
+import { RoundTwentySixComponent } from './results/round-twenty-six/round-twenty-six.component';
 
 
 @NgModule({
@@ -85,7 +87,9 @@ import { CupPongBracketComponent } from './results/round-twenty-four/cup-pong-br
     RoundTwentyTwoComponent,
     RoundTwentyThreeComponent,
     RoundTwentyFourComponent,
-    CupPongBracketComponent
+    CupPongBracketComponent,
+    RoundTwentyFiveComponent,
+    RoundTwentySixComponent
   ],
   imports: [
     BrowserModule,

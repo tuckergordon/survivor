@@ -25,6 +25,8 @@ import { RoundTwentyOneComponent } from './results/round-twenty-one/round-twenty
 import { RoundTwentyTwoComponent } from './results/round-twenty-two/round-twenty-two.component';
 import { RoundTwentyThreeComponent } from './results/round-twenty-three/round-twenty-three.component';
 import { RoundTwentyFourComponent } from './results/round-twenty-four/round-twenty-four.component';
+import { RoundTwentyFiveComponent } from './results/round-twenty-five/round-twenty-five.component';
+import { RoundTwentySixComponent } from './results/round-twenty-six/round-twenty-six.component';
 
 const routes: Routes = [
   {
@@ -129,6 +131,14 @@ const routes: Routes = [
       {
         path: '24',
         component: RoundTwentyFourComponent,
+      },
+      {
+        path: '25',
+        component: RoundTwentyFiveComponent,
+      },
+      {
+        path: '26',
+        component: RoundTwentySixComponent,
       },
     ]
   },

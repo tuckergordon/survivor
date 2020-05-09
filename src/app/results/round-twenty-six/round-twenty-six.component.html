@@ -1,0 +1,37 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Movies That Start With 'D'</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">
+        You must name a movie based off one still from the film. This is a sporcle quiz. You have six minutes. Please
+        only do it once. You may look at the images before doing the quiz, but don't use any outside resources or look
+        up anything to try to cheat. Thanks! Here's the <a href="https://www.sporcle.com/games/sweett310/d-movies-picture-quiz?playlist=movies-by-picture&creator=SporcleEXP&pid=4Ca12986Q">link</a>.
+      </p>
+      <p class="round-description">
+        Oh and all the movies start with "D"
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar></div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- <div style="display: flex; margin-bottom: 30px;">
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="s"></app-score-bar-chart>
+  </mat-card>
+</div> -->

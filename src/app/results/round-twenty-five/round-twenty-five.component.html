@@ -1,0 +1,30 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Drawasaurus</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">
+        So, I'm trying to get a time that we all can play <a href="https://www.drawasaurus.org/">Drawasaurus</a> together. It's an online game where one person
+        draws and the others guess what they are drawing. The winner after three full rounds would get immunity. There
+        may be a twist in the works also. 
+      </p>
+      <p class="round-description">
+        <strong>UPDATE: Joe won.</strong> I forgot to write down the scores.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar></div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
