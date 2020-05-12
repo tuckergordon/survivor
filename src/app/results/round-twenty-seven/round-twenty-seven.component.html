@@ -1,0 +1,58 @@
+<div class="round-header-cards">
+  <mat-card class="round-header-card" style="flex: 1 1 80%;">
+    <mat-card-header>
+      <mat-card-title>Round {{ ROUND }}: Finalist Trivia</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="round-description">
+        For this challenge, there will be two phases.
+        In phase one, I will give you a series of questions concerning this game (see below). You will simply answer
+        these questions honestly from your own perspective. Once the questions have been answered, phase two will begin.
+      </p>
+      <!-- <p class="round-description"> -->
+        These are the questions:
+        <ol>
+          <li>Who is the player remaining who is most deserving of winning?</li>
+
+          <li>Who of the players that have been voted out is the most deserving of winning?</li>
+
+          <li>Who is the remaining player who cares the least about the game?</li>
+
+          <li>Who of the remaining players is the most paranoid about getting voted out?</li>
+
+          <li>Who wants to win the most out of the remaining players?</li>
+
+          <li>Who is the sneakiest of ALL players?</li>
+
+          <li>Who of remaining players AND JURY MEMBERs is least deserving of being on the jury?</li>
+
+          <li>Who of the remaining players am I (Andrew) closest with?</li>
+
+          <li>What has been the best challenge in the game so far?</li>
+
+          <li> What has been the worst challenge in the game so far?</li>
+        </ol>
+      <!-- </p> -->
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="round-header-card eliminated-card">
+    <mat-card-header>
+      <mat-card-title>Eliminated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="eliminated-players">
+        <div *ngFor="let player of eliminated$ | async" class="eliminated-player">
+          <div class="tribe-icon" mat-card-avatar></div>
+          <span class="eliminated-player__name">{{ player.name }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex; margin-bottom: 30px;">
+  <mat-card class="chart-card">
+    <app-score-bar-chart *ngIf="players$ | async" [players]="players$ | async" [round]="ROUND" sortDirection="desc"
+      resultUnit="s"></app-score-bar-chart>
+  </mat-card>
+</div>
