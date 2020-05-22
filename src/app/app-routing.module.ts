@@ -28,6 +28,7 @@ import { RoundTwentyFourComponent } from './results/round-twenty-four/round-twen
 import { RoundTwentyFiveComponent } from './results/round-twenty-five/round-twenty-five.component';
 import { RoundTwentySixComponent } from './results/round-twenty-six/round-twenty-six.component';
 import { RoundTwentySevenComponent } from './results/round-twenty-seven/round-twenty-seven.component';
+import { RoundTwentyEightComponent } from './results/round-twenty-eight/round-twenty-eight.component';
 
 const routes: Routes = [
   {
@@ -144,6 +145,10 @@ const routes: Routes = [
       {
         path: '27',
         component: RoundTwentySevenComponent,
+      },
+      {
+        path: '28',
+        component: RoundTwentyEightComponent,
       },
     ]
   },
